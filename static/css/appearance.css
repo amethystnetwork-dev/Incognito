@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+body {
+    --border-color: rgb(255, 255, 255, .2);
+    --text-color: #FFF;
+    --header-background: inherit;
+    --accent: mediumseagreen;
+    --scrollbar-thumb-color: rgb(52, 184, 116, 0.3);
+    --scrollbar-track-color: rgb(52, 184, 116, 0.1);
+    --font-family: Roboto;
+    --background: #161923;
+    background: var(--background);
+}
+
+body[data-appearance="morning"] {
+    --background: #FFF;
+    --header-background: #FFF;
+    --header-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px 0px;
+    --border-color: rgb(0, 0, 0, .2);
+    --text-color: #343434;
+    --accent: dodgerblue;
+    --scrollbar-thumb-color: rgb(32, 148, 252, 0.3);
+    --scrollbar-track-color: rgb(32, 148, 252, 0.1);
+}
+
+body[data-appearance="resilent"] {
+    --border-color: rgb(255, 255, 255, .2);
+    --text-color: #FFF;
+    --header-background: #185ADB;
+    --accent: #FFC947;
+    --scrollbar-thumb-color: rgb(255, 176, 68, 0.3);
+    --scrollbar-track-color: rgb(255, 176, 68, 0.1);
+    --background:#0A1931;
+}
+
+body[data-appearance="terminal"] {
+    --border-color: rgb(255, 255, 255, .2);
+    --text-color: #FFF;
+    --header-background: #000;
+    --accent: mediumseagreen;
+    --scrollbar-thumb-color: rgb(52, 184, 116, 0.3);
+    --scrollbar-track-color: rgb(52, 184, 116, 0.1);
+    --font-family: Ubuntu Mono;
+    --background:#000;
+}
+ 
+body[data-appearance="midnight"] {
+    --border-color:rgb(255, 255, 255, .2);
+    --header-background: #181818;
+    --text-color: #FFF;
+    --accent: dodgerblue;
+    --background: #121212;
+    --scrollbar-thumb-color: rgb(32, 148, 252, 0.3);
+    --scrollbar-track-color: rgb(32, 148, 252, 0.1);
+}
+
+body[data-appearance=space] {
+    --border-color:rgb(255, 255, 255, .2);
+    --header-background: #181818;
+    --text-color: #FFF;
+    --accent: #FFF;
+    --background: #0f0c29;
+    --scrollbar-thumb-color: rgb(255, 255, 255, 0.3);
+    --scrollbar-track-color: rgb(255, 255, 255, 0.1);
+    background: -webkit-linear-gradient(19deg, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(19deg, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+    background-position: center; 
+}
