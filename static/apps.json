@@ -1,0 +1,62 @@
+[
+    {
+        "title": "Google",
+        "img": "./img/apps/google.jpg",
+        "location": "https://www.google.com"
+    },
+    {
+        "title": "Youtube",
+        "img": "./img/apps/yt.png",
+        "location": "https://www.youtube.com"
+    },
+    {
+        "title": "Spotify",
+        "img": "./img/apps/spot.png",
+        "location": "https://open.spotify.com"
+    },
+    {
+        "title": "Twitter",
+        "img": "./img/apps/twt.png",
+        "location": "https://twitter.com/explore"
+    },
+    {
+        "title": "Reddit",
+        "img": "./img/apps/rt.png",
+        "location": "https://reddit.com"
+    },
+    {
+        "title": "Twitch",
+        "img": "./img/apps/tich.jpg",
+        "location": "https://twitch.tv"
+    },
+    {
+        "title": "Discord",
+        "img": "./img/apps/dd.jpg",
+        "location": "https://discord.com/app"
+    },
+    {
+        "title": "Tik Tok",
+        "img": "./img/apps/tt.jpg",
+        "location": "https://www.tiktok.com"
+    },
+    {
+        "title": "Retro Arch",
+        "img": "./img/apps/retroarch.png",
+        "location": "./source/retroarch/"
+    },
+    {
+        "title": "CoolMathGames",
+        "img": "./img/apps/cmg.png",
+        "location": "https://www.coolmathgames.com"
+    },
+    {
+        "title": "Geforce Now",
+        "img": "./img/apps/gfnow.png",
+        "location": "https://play.geforcenow.com"
+    },
+    {
+        "title": "Y8",
+        "img": "./img/apps/y8.png",
+        "location": "https://www.y8.com"
+    }
+]
