@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ruffle-embed {
+    width: 100%;
+    height: 100vh;
+}
