@@ -5,7 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/index.css">
         <link rel="icon" href="" id="favicon">
+        <link rel="manifest" href="/manifest.json">
         <script src="./script/particles.js"></script>
+        <script>
+            window.addEventListener('load', function() {
+  'use strict';
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('/sw.js');
+  }
+})
+        </script>
         <!--script async>
             // Incognito analytics
             // Only tracks user visits!
