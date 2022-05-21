@@ -40,11 +40,6 @@
         "location": "https://www.tiktok.com"
     },
     {
-        "title": "Retro Arch",
-        "img": "./img/apps/retroarch.png",
-        "location": "./source/retroarch/"
-    },
-    {
         "title": "CoolMathGames",
         "img": "./img/apps/cmg.png",
         "location": "https://www.coolmathgames.com"
