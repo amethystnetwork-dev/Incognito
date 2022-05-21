@@ -1,0 +1,13 @@
+{
+  "name": "Incognito",
+  "short_name": "Incognito",
+  "description": "Access the world wide web",
+  "icons": [{
+    "src": "index.png",
+      "sizes": "360x360",
+      "type": "image/png"
+    }],
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone"
+}
