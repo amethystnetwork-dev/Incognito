@@ -186,7 +186,7 @@ async function options(app) {
                         selector
                     },
                     onClick: {
-                        goBlank(){}
+                        goBlank()
                     }
                 })
             ], {
