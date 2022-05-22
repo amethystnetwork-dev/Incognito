@@ -181,14 +181,6 @@ async function options(app) {
                         'margin-bottom': '0'
                     }
                 }),
-            app.createElement('button', 'Go about blank', {
-                    class: {
-                        selector
-                    },
-                })
-            ], {
-                class: 'data-section'
-            }),
             app.createElement('section', [
                 app.createElement('span', 'Tab Icon', {
                     style: {
