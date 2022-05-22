@@ -167,35 +167,6 @@ async function options(app) {
                             localStorage.setItem('incog||title', event.target.value);
                         }
                     }
-                }), 
-             app.createElement('p', 'Change the title of Incognito\'s browser tab title.', {
-                    style: {
-                        'margin-bottom': '0'
-                    }
-                }),
-            app.createElement('section', [
-                app.createElement('span', 'Tab Icon', {
-                    style: {
-                        display: 'block',
-                        'margin-bottom': '6px',
-                        'font-size': '18px',
-                        'font-weight': '500'
-                    }
-                }),
-                app.createElement('input', [], {
-                    attrs: {
-                        value: app.icon.href,
-                        placeholder: 'No icon'
-                    },
-                    style: {
-                        width: '300px',
-                    },
-                    events: {
-                        input(event) {
-                            app.icon.href = event.target.value;
-                            localStorage.setItem('incog||icon', event.target.value);
-                        }
-                    }
                 }),
                 app.createElement('p', 'Change the title of Incognito\'s browser tab title.', {
                     style: {
