@@ -185,9 +185,6 @@ async function options(app) {
                     class: {
                         selector
                     },
-                    onClick: {
-                        goBlank()
-                    }
                 })
             ], {
                 class: 'data-section'
