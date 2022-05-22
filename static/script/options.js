@@ -8,7 +8,7 @@ function goBlank() {
 page.setType("blank")
 page.setUrl(window.location.href)
 page.open()
-}
+};
 async function options(app) {
     document.querySelector('#open-nav').setAttribute('data-open', '');
     app.search.title.style.display = 'block';
