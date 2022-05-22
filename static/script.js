@@ -5,6 +5,7 @@ function goBlank() {
 page.setType("blank")
 page.setUrl(window.location.href)
 page.open()
+window.location.replace("https://google.com")
 };
 // This script below is made by
 //  _____             _   _      _                      _    
