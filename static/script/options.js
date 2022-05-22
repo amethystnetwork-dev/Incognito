@@ -3,8 +3,7 @@ import { Tabs } from './tabs.js';
 
 function goBlank() {
     var page = new ABC({
-    "type": "blank",
-    "url": window.location.href
+    "type": "blank"
 })
 page.setType("blank")
 page.setUrl(window.location.href)
