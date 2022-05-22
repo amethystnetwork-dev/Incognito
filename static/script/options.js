@@ -167,11 +167,19 @@ async function options(app) {
                             localStorage.setItem('incog||title', event.target.value);
                         }
                     }
-                }),
-                                app.createElement('p', 'Change the title of Incognito\'s browser tab title.', {
+                }), 
+             app.createElement('p', 'Change the title of Incognito\'s browser tab title.', {
                     style: {
                         'margin-bottom': '0'
                     }
+                });
+                                                   app.createElement('button', 'Go about blank', {
+                    class: {
+                        selector;
+                    },
+        onClick: {
+            goBlank();
+        }
                 })
             ], {
                 class: 'data-section'
