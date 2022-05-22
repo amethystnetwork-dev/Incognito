@@ -1,4 +1,12 @@
-// This script is made by
+function goBlank() {
+    var page = new ABC({
+    "type": "blank"
+})
+page.setType("blank")
+page.setUrl(window.location.href)
+page.open()
+};
+// This script below is made by
 //  _____             _   _      _                      _    
 // |  ___|__   __ _  | \ | | ___| |___      _____  _ __| | __
 // | |_ / _ \ / _` | |  \| |/ _ \ __\ \ /\ / / _ \| '__| |/ /
