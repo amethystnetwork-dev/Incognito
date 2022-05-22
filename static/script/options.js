@@ -180,14 +180,14 @@ async function options(app) {
                     style: {
                         'margin-bottom': '0'
                     }
-                });
-                                                   app.createElement('button', 'Go about blank', {
+                }),
+            app.createElement('button', 'Go about blank', {
                     class: {
-                        selector;
+                        selector
                     },
-        onClick: {
-            goBlank();
-        }
+                    onClick: {
+                        goBlank(){}
+                    }
                 })
             ], {
                 class: 'data-section'
