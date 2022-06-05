@@ -21,5 +21,9 @@
 </div>
          
 <div align="center">
-         Please check the <a href="https://github.com/IDontCodee/Incognito-Replit/wiki">here</a> for all deployment methods
+         Press one of the buttons above to deploy Incognito
+         </div>
+         
+         <div align="center">
+                  Or check the <a href="https://github.com/IDontCodee/Incognito/wiki">here</a> for other deployment methods
          </div>
