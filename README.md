@@ -1,5 +1,5 @@
 <div align="center">
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img height="30px" src="https://img.shields.io/badge/Railway-%234f0599.svg?style=for-the-badge&logo=railway&logoColor=white"><img></a>
+         
 <kbd>
 <img style="border-radius:50%" height="150px" src="https://raw.githubusercontent.com/IDontCodee/Incognito/main/static/index.svg">
 </kbd>
@@ -22,6 +22,7 @@
          
 <div align="center">
          Press one of the buttons above to deploy Incognito  
+         <br>
          <br>
          Or check the <a href="https://github.com/IDontCodee/Incognito/wiki">here</a> for other deployment methods
 </div>
