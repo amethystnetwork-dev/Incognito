@@ -25,4 +25,7 @@
          <br>
          <br>
          Or check <a href="https://github.com/IDontCodee/Incognito/wiki">here</a> for other deployment methods
+         <br>
+         <br>
+         Please note that replit sometimes likes to be annoying.
 </div>
