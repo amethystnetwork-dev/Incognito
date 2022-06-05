@@ -1,7 +1,7 @@
 {
-    "name": "Ultraviolet App",
-    "description": "Node.js Ultraviolet instance",
-    "repository": "https://github.com/titaniumnetwork-dev/ultraviolet-web-app",
-    "logo": "https://github.com/titaniumnetwork-dev/Ultraviolet/blob/main/uv.png?raw=true",
-    "keywords": ["tomp", "ultraviolet"]
+    "name": "Incognito",
+    "description": "Incognito with bare server",
+    "repository": "https://github.com/IDontCodee/Incognito",
+    "logo": "https://github.com/IDontCodee/Incognito/blob/main/static/index.svg?raw=true",
+    "keywords": ["titaniumnetwork", "ultraviolet"]
 }
