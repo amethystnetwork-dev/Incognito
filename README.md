@@ -24,5 +24,5 @@
          Press one of the buttons above to deploy Incognito  
          <br>
          <br>
-         Or check the <a href="https://github.com/IDontCodee/Incognito/wiki">here</a> for other deployment methods
+         Or check <a href="https://github.com/IDontCodee/Incognito/wiki">here</a> for other deployment methods
 </div>
