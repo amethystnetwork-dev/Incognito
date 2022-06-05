@@ -21,6 +21,7 @@
 </div>
          
 <div align="center">
-         Press one of the buttons above to deploy Incognito       
+         Press one of the buttons above to deploy Incognito  
+         <br>
          Or check the <a href="https://github.com/IDontCodee/Incognito/wiki">here</a> for other deployment methods
 </div>
