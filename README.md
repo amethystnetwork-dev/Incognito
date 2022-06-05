@@ -15,10 +15,6 @@
 <a href="https://repl.it/github/IDontCodee/Incognito"><img height="30px" src="https://raw.githubusercontent.com/IDontCodee/Incognito/main/deploy/replit.svg"><img></a>
 <a href="https://railway.app/new/template?template=https://github.com/IDontCodee/Incognito"><img height="30px" src="https://img.shields.io/badge/Railway-%234f0599.svg?style=for-the-badge&logo=railway&logoColor=white"><img></a>
 </p>
-
-<div class="rickroll" align="center">
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img height="30px" src="https://img.shields.io/badge/Rickroll-A6A9AA?style=for-the-badge&logoColor=white"><img></a>
-</div>
          
 <div align="center">
          Press one of the buttons above to deploy Incognito  
