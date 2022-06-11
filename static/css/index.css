@@ -199,6 +199,15 @@ header[data-page] {
     max-height: 200px;
     overflow-y: scroll;
 }
+.blank-button {
+    background: 0 0;
+    border: none;
+    margin: 0 10px;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    flex-grow: 1;
+    outline: none;
+}
 .selector {
     padding: 20px 18px;
     display: inline-block;
