@@ -4,34 +4,41 @@
       "location": "./load.html#a3J1bmtlci5pbw%3D%3D",
       "title": "Krunker.io",
       "author": "Yendis Entertainment",
-      "description": "Krunker is a remarkable first-person shooter game where you fall right into a dark world, tasked with fighting against other players from around the world."
+      "description": "Krunker is a remarkable first-person shooter game where you fall right into a dark world, tasked with fighting against other players from around the world.",
+      "category": "multi",
+      "featured": true
     },
     {
       "img": "./img/gs/moo.png",
       "location": "./load.html#aHR0cHM6Ly9tb29tb28uaW8%3D",
       "title": "Moomoo.io",
       "author": "Yendis Entertainment",
+      "category": "multi",
       "description": "MooMoo.io is a multiplayer base building and survival game. Collect resources around the map to build a village. Your Windmills generate points over time. But make sure to protect them from other players."
     },
     {
       "img": "./img/gs/shellshockers.jpg",
       "location": "./load.html#aHR0cHM6Ly9zaGVsbHNob2NrLmlv",
+      "category": "multi",
       "title": "Shell Shockers"
     },
     {
       "img": "./img/gs/skiribbl.png",
       "location": "./load.html#aHR0cHM6Ly9za3JpYmJsLmlv",
+       "category": "multi",
       "title": "Skribbl.io"
     },
     {
       "img": "./img/gs/fn.png",
       "location": "./load.html#aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL21hbGwvIy9kZWVwbGluaz9nYW1lLWlkPTQ2YmZhYjA2LWQ4NjQtNDY1ZC05ZTU2LTJkOWU0NWNkZWUwYQ%3D%3D",
-      "title": "Fortnite"
+      "title": "Fortnite",
+      "category": "gfn"
     },
     {
       "img": "./img/gs/sg.jpg",
       "location": "./load.html#aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL21hbGwvIy9kZWVwbGluaz9nYW1lLWlkPTM5Njk5ZmI3LTVhMDUtNDFlNi04NmIyLTNjZDZmZDZjNDU5Yw%3D%3D",
-      "title": "Splitgate"
+      "title": "Splitgate",
+      "category": "gfn"
     },
     {
       "img": "./img/gs/1-on-1-soccer.jpg",
@@ -43,6 +50,8 @@
       "img": "./img/gs/1v1-lol.jpg",
       "location": "./load.html#MXYxLmxvbA%3D%3D",
       "title": "1v1.LOL",
+      "category": "multi",
+      "featured": true,
       "description": "Discover 1v1, the online building simulator & third person shooting game. Battle royale, build fight, box fight, zone wars and more game modes to enjoy!"
     },
     {
@@ -81,12 +90,14 @@
       "location": "/source/dinosaur/",
       "title": "Chrome Dinosaur",
       "author": "Google",
+      "category": "web",
       "description": "The Dinosaur Game is a browser game developed by Google and built into the Google Chrome web browser. The player guides a pixelated Tyrannosaurus rex across a side-scrolling landscape, avoiding obstacles to achieve a higher score."
     },
     {
       "img": "./img/gs/cookie-clicker.jpg",
       "location": "/source/cookie/",
       "title": "Cookie Clicker",
+      "category": "web",
       "description": "Cookie Clicker is an idle clicker game. Bake millions of delicious cookies by clicking on a giant cookie.",
       "author": "Orteil"
     },
@@ -101,6 +112,7 @@
       "img": "./img/gs/doodle-jump.jpg",
       "location": "/source/doodle-jump/",
       "title": "Doodle Jump",
+      "category": "web",
       "author": "Lima Sky"
     },
     {
@@ -111,6 +123,7 @@
     {
       "img": "./img/gs/flappybird.jpg",
       "location": "/source/flappybird/",
+      "category": "web",
       "title": "Flappy Bird"
     },
     {
@@ -141,6 +154,7 @@
     {
       "img": "./img/gs/littlebigsnake.jpg",
       "location": "./load.html#bGl0dGxlYmlnc25ha2UuY29t",
+      "category": "multi",
       "title": "LittleBigSnake"
     },
     {
@@ -156,7 +170,8 @@
     {
       "img": "./img/gs/paper-io.jpg",
       "location": "./load.html#cGFwZXItaW8uY29t",
-      "title": "Paper.io"
+      "title": "Paper.io",
+      "category": "multi"
     },
     {
       "img": "./img/gs/portal2d.jpg",
@@ -171,12 +186,14 @@
     {
       "img": "./img/gs/retro-bowl.jpg",
       "location": "/source/retro-bowl/",
+      "category": "web",
       "title": "Retro Bowl"
     },
     {
       "img": "./img/gs/sm64.jpg",
       "location": "/source/sm64/",
-      "title": "Super Mario 64"
+      "title": "Super Mario 64",
+      "category": "n64"
     },
     {
       "img": "./img/gs/spaceinvaders.jpg",
@@ -186,17 +203,20 @@
     {
       "img": "./img/gs/vex3.jpg",
       "location": "/source/vex3/",
-      "title": "Vex 3"
+      "title": "Vex 3",
+      "category": "web"
     },
     {
       "img": "./img/gs/vex4.jpg",
       "location": "/source/vex4/",
-      "title": "Vex 4"
+      "title": "Vex 4",
+      "category": "web"
     },
     {
       "img": "./img/gs/vex5.jpg",
       "location": "/source/vex5/",
-      "title": "Vex 5"
+      "title": "Vex 5",
+      "category": "web"
     },
     {
       "img": "./img/gs/warfare1917.png",
@@ -211,6 +231,7 @@
     {
       "img": "./img/gs/zombsroyale.jpg",
       "location": "./load.html#em9tYnNyb3lhbGUuaW8%3D",
-      "title": "ZombsRoyale.io"
+      "title": "ZombsRoyale.io",
+      "category": "multi"
     }
   ]
