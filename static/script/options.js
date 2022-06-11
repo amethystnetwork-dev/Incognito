@@ -207,6 +207,31 @@ async function options(app) {
                 })
             ], {
                 class: 'data-section'
+            }),
+            app.createElement('section', [
+                app.createElement('span', 'about:blank cloaking', {
+                    style: {
+                        display: 'block',
+                        'margin-bottom': '6px',
+                        'font-size': '18px',
+                        'font-weight': '500'
+                    }
+                }),
+                app.createElement('button', [], {
+                    attrs: {
+                        value: app.icon.href
+                    },
+                    style: {
+                        width: '300px',
+                    },
+                    events: {
+                        input(event) {
+                            goBlank();
+                        }
+                    }
+                })
+            ], {
+                class: 'data-section'
             })
         ]
     ));
@@ -246,6 +271,8 @@ async function options(app) {
         },
         id: 'appearance',
     });
+
+    
 
     tabs.switchTab('appearance');
 
