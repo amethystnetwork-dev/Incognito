@@ -17,8 +17,53 @@
 </p>
          
 <div align="center">
-         Press one of the buttons above to deploy Incognito  
-         <br>
-         <br>
-         Or check <a href="https://github.com/IDontCodee/Incognito/wiki">here</a> for other deployment methods.
+         To get started, press one of the buttons above to deploy Incognito
 </div>
+
+- [Overview](#overview)
+  - [Features](#features)
+  - [Proxy](#proxy)
+- [FAQ](#faq)
+- [More](#more)
+  - [Docs](#docs)
+  - [Proxy Sources](#proxy-sources)
+  - [Credits](#credits)
+
+## Overview
+
+
+### Features
+
+- Ultraviolet
+- Nice game library
+- Tab Cloaks
+
+### Proxy
+
+Incognito uses Ultraviolet as its only proxy.
+
+[Ultraviolet (Node)](https://github.com/titaniumnetwork-dev/Ultraviolet-Node)
+
+## FAQ
+
+**How can I get official Incognito domains?**
+
+You should join the official [Titanium Network Discord](https://discord.gg/unblock) for official links
+
+**Who is this repo for?**
+
+This repo is for people that want a easy way to deploy Incognito to cloud hosting services like Railway. If you just want to use Incognito and not deploy it, I recommend you get a official Incognito domain (Check above for how to do so)
+
+## More
+
+### Docs
+
+You can find the docs over on the [Wiki](https://github.com/IDontCodee/Incognito/wiki)
+
+### Proxy Sources
+
+[Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet)
+
+### Credits
+
+[Caracal.js](https://github.com/caracal-js) - Creator of Incognito
