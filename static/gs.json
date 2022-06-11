@@ -99,7 +99,8 @@
       "title": "Cookie Clicker",
       "category": "web",
       "description": "Cookie Clicker is an idle clicker game. Bake millions of delicious cookies by clicking on a giant cookie.",
-      "author": "Orteil"
+      "author": "Orteil",
+      "featured": true
     },
     {
       "img": "./img/gs/cubefield.jpg",
