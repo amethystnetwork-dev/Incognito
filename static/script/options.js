@@ -218,6 +218,9 @@ async function options(app) {
                     }
                 }),
                 app.createElement('button', 'Go about:blank', {
+                    attrs: {
+                        class: 'blank-button'
+                    },
                     style: {
                         width: '300px',
                     },
