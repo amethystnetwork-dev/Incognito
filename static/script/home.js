@@ -1,3 +1,13 @@
+
+const tips = [
+    'Modify Incognitos appearance & browser tab in <a href="#settings">settings.</a>',
+    'Access popular media & sites easily in <a href="#apps">apps.</a>',
+    'This is a unofficial deployable version of Incognito. Obtain official Incognito links in the <a href="#community">Titanium Network community.</a>',    
+    'Support Incognito at our <a href="https://www.patreon.com/incognitotn">Patreon.</a>'
+];
+
+
+
 function access(app) {
     if (document.querySelector('header').hasAttribute('data-init')) {
         document.querySelector('header').removeAttribute('data-init')
@@ -12,14 +22,22 @@ function access(app) {
     app.header.target.setAttribute('data-page', '');
     app.nav.target.style.removeProperty('display');
     document.querySelector('#open-nav').setAttribute('data-open', '');
+    app.search.input.focus();
+
+
     
-    app.nav.community = app.createLink('javascript:goBlank();', 'Go about:blank');
+    app.nav.community = app.createLink('#community', 'Community');
     app.nav.support = app.createLink('#support', 'Support');
     app.nav.apps = app.createLink('#apps', 'Apps');
     app.nav.games = app.createLink('#gs', 'Games');
     app.nav.settings = app.createLink('#settings', '<i class="fas fa-sliders-h secondary"></i>', {
         id: 'apps'
     })
+
+	app.main.tip = app.createElement('div', tips[Math.floor(Math.random()*tips.length)], {
+        class: 'tip'
+    });
+
 
     app.main.suggestions = app.createElement('div', [], {
         class: 'suggestions',
@@ -35,22 +53,24 @@ function access(app) {
             if (!event.target.value) {
                 app.nav.target.style.removeProperty('display');
                 app.header.target.setAttribute('data-page', '');
+		app.main.tip.style.removeProperty('display');
                 app.search.logo.style.display = 'inline';
                 return;
             }
+	    app.main.tip.style.display = 'none';
             app.header.target.removeAttribute('data-page');
             app.nav.target.style.display = 'none';
             app.search.logo.style.display = 'none';
 
             clearTimeout(app.timeout);
             app.timeout = setTimeout(async () => {
-                const res = await fetch('https://incog.dev/bare/v1/', {
+                const res = await fetch(__uv$config.bare + 'v1/', {
                     headers: {
                         'x-bare-host': 'duckduckgo.com',
                         'x-bare-protocol': 'https:',
                         'x-bare-path': '/ac/?q=' + encodeURIComponent(event.target.value),
                         'x-bare-port': '443',
-                        'x-bare-headers': '{}',
+                        'x-bare-headers': JSON.stringify({ Host: 'duckduckgo.com' }),
                         'x-bare-forward-headers': '[]'
                     }
                 })
