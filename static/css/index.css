@@ -201,7 +201,6 @@ header[data-page] {
 }
 .blank-button {
     background: 0 0;
-    border: none;
     margin: 0 10px;
     color: var(--text-color);
     font-family: var(--font-family);
