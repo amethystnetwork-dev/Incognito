@@ -219,15 +219,11 @@ async function options(app) {
                 }),
                 app.createElement('button', 'Go about:blank', {
                     attrs: {
-                        class: 'blank-button'
+                        class: 'blank-button',
+                        onclick: 'goBlank();'
                     },
                     style: {
                         width: '300px',
-                    },
-                    events: {
-                        input(event) {
-                            goBlank();
-                        }
                     }
                 })
             ], {
