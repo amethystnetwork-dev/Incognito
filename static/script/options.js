@@ -217,10 +217,7 @@ async function options(app) {
                         'font-weight': '500'
                     }
                 }),
-                app.createElement('button', [], {
-                    attrs: {
-                        value: app.icon.href
-                    },
+                app.createElement('button', 'Go about:blank', {
                     style: {
                         width: '300px',
                     },
