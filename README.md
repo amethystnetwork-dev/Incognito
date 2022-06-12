@@ -20,30 +20,23 @@
          To get started, press one of the buttons above to deploy Incognito
 </div>
 
-- [Overview](#overview)
-  - [Features](#features)
-  - [Proxy](#proxy)
+## Overview
+
+You can find more info over on the [Wiki](https://github.com/IDontCodee/Incognito/wiki)
+
+- [Features](#features)
 - [FAQ](#faq)
 - [More](#more)
-  - [Docs](#docs)
   - [Proxy Sources](#proxy-sources)
   - [Credits](#credits)
 
-## Overview
 
-
-### Features
+## Features
 
 - Ultraviolet
 - Nice game library
 - Tab Cloaks
 - about:blank cloak
-
-### Proxy
-
-Incognito uses Ultraviolet as its only proxy.
-
-[Ultraviolet (Node)](https://github.com/titaniumnetwork-dev/Ultraviolet-Node)
 
 ## FAQ
 
@@ -56,10 +49,6 @@ You should join the official [Titanium Network Discord](https://discord.gg/unblo
 This repo is for people that want a easy way to deploy Incognito to cloud hosting services like Railway. If you just want to use Incognito and not deploy it, I recommend you get a official Incognito domain (Check above for how to do so)
 
 ## More
-
-### Docs
-
-You can find the docs over on the [Wiki](https://github.com/IDontCodee/Incognito/wiki)
 
 ### Proxy Sources
 
