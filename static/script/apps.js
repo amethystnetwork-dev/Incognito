@@ -23,10 +23,10 @@ async function apps(app) {
 
             app.main.library.querySelectorAll('.gs-entry').forEach(node => {
                 if (node.getAttribute('data-title').toLowerCase().includes(app.search.input.value.toLowerCase())) {
-                    node.style.display = 'block';
+                    node.setAttribute('data-active', '1');
                     count++;
                 } else {
-                    node.style.display = 'none';
+                    node.removeAttribute('data-active');
                 };
             }); 
 
@@ -56,7 +56,8 @@ async function compileGs(app) {
                     'background-size': 'cover'
                 },
                 attrs: {
-                    'data-title': entry.title
+                    'data-title': entry.title,
+                    'data-active': ''
                 },
                 events: {
                     click(event) {
