@@ -37,6 +37,7 @@
 - Ultraviolet
 - Nice game library
 - Tab Cloaks
+- about:blank cloak
 
 ### Proxy
 
