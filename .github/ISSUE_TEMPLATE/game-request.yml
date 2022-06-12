@@ -1,5 +1,5 @@
 name: Game Request
-about: Game Request
+description: Game Request
 labels: [game request]
 body:
   - type: dropdown
