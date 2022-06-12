@@ -8,12 +8,12 @@ body:
       label: Game Type
       multiple: false
       options:
-        - Online URL
-        - HTML
+        - Website ( eg 1v1 lol )
+        - Offline HTML game ( eg Chroma Incident )
   - type: input
     id: gameurl
     attributes:
-      label: Game Url
+      label: Game URL
       placeholder: Link to the game url
     validations:
       required: false
@@ -23,4 +23,4 @@ body:
       label: Comment
       placeholder: Leave a comment
     validations:
-      required: false
+      required: true
