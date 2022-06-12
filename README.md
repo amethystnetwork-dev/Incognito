@@ -27,7 +27,6 @@
 - [More](#more)
   - [Docs](#docs)
   - [Proxy Sources](#proxy-sources)
-  - [Experimental deploy options](#experimental-deploy-options)
   - [Credits](#credits)
 
 ## Overview
@@ -65,16 +64,6 @@ You can find the docs over on the [Wiki](https://github.com/IDontCodee/Incognito
 ### Proxy Sources
 
 [Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet)
-
-### Experimental deploy options
-
-These options below are not officially supported!
-
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/IDontCodee\Incognito&branch=master&name=Incognito&run_command=npm%start)
-[![Deploy to Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)](https://deploy.azure.com/?repository=https://github.com/IDontCodee/Incognito)
-[![Deploy to IBM Cloud](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/ibmcloud.svg)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/IDontCodee/Incognito)
-[![Deploy to Amplify Console](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/amplifyconsole.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/IDontCodee/Incognito)
-[![Run on Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)](https://deploy.cloud.run/?git_repo=https://github.com/IDontCodee/Incognito)
 
 ### Credits
 
