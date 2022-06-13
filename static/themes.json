@@ -1,0 +1,26 @@
+[
+        {
+            id: 'ocean',
+            content: 'Ocean',
+        },
+        {
+            id: 'midnight',
+            content: 'Midnight',
+        },
+        {
+            id: 'space',
+            content: 'Space'
+        },
+        {
+            id: 'morning',
+            content: 'Morning',
+        },
+        {
+            id: 'terminal',
+            content: 'Terminal',
+        },
+        {
+            id: 'resilent',
+            content: 'Resilient',
+        }
+    ]
