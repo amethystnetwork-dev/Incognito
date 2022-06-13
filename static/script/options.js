@@ -8,7 +8,8 @@ async function options(app) {
     app.search.input.style.display = 'none';
 
     const tabs = new Tabs(app);
-    const themes = await fetch('/themes.json');
+    const temp1 = await fetch('/themes.json');
+    const themes = await temp.json();
           
           
     const selection = new Selection(app);
