@@ -26,10 +26,13 @@
 
 ## Overview
 
+### Discord Server
+
+[![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/J3VPy5Vy8x)
+
 - [Features](#features)
 - [FAQ](#faq)
 - [More](#more)
-  - [Discord Server](#discord-server)
   - [Proxy Sources](#proxy-sources)
   - [Credits](#credits)
 
@@ -52,10 +55,6 @@ You should join the official [Titanium Network Discord](https://discord.gg/unblo
 This repo is for people that want a easy way to deploy Incognito to cloud hosting services like Railway. If you just want to use Incognito and not deploy it, I recommend you get a official Incognito domain (Check above for how to do so)
 
 ## More
-
-### Discord Server
-
-[![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/J3VPy5Vy8x)
 
 ### Proxy Sources
 
