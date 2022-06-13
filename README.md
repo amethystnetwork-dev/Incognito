@@ -24,11 +24,11 @@
          If that does not answer your question or you want to share the link you made, join our <a href="#discord-server">Discord server</a>
 </div>
 
-## Overview
-
-### Discord Server
+## Discord Server
 
 [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/J3VPy5Vy8x)
+
+## Overview
 
 - [Features](#features)
 - [FAQ](#faq)
