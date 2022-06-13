@@ -4,7 +4,7 @@ const tips = [
     'You can enable about:blank tab cloaking in <a href="#settings">settings.</a>',
     'Access popular media & sites easily in <a href="#apps">apps.</a>',
     'This unofficial Incognito version is made by G&#173;it&#173;Hu&#173;b user IDo&#173;n&#173;tCod&#173;ee.',   
-    'Join our <a href="#community">discord</a> ( not official )',
+    'Join our <a href="#community">d&#173;i&#173;sco&#173;rd</a> ( not official )',
     'Support Incognito at our <a href="https://www.patreon.com/incognitotn">Patreon.</a>'
 ];
 
