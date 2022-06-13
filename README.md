@@ -55,7 +55,7 @@ This repo is for people that want a easy way to deploy Incognito to cloud hostin
 
 ### Discord Server
 
-https://discord.gg/J3VPy5Vy8x
+[![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/J3VPy5Vy8x)
 
 ### Proxy Sources
 
