@@ -8,12 +8,7 @@ async function options(app) {
     app.search.input.style.display = 'none';
 
     const tabs = new Tabs(app);
-    const selection = new Selection(app);
-
-    const backgroundSelection = new Selection(app);
-    
-
-    [
+    const themes = [
         {
             id: 'ocean',
             content: 'Ocean',
@@ -38,7 +33,15 @@ async function options(app) {
             id: 'resilent',
             content: 'Resilient',
         }
-    ].forEach(entry => {
+    ]
+          
+          
+    const selection = new Selection(app);
+
+    const backgroundSelection = new Selection(app);
+    
+
+    themes.forEach(entry => {
         selection.createSelector(entry.id, app.createElement('li', entry.content, {
             class: 'selector'
         }))
