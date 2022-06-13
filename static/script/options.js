@@ -8,32 +8,7 @@ async function options(app) {
     app.search.input.style.display = 'none';
 
     const tabs = new Tabs(app);
-    const themes = [
-        {
-            id: 'ocean',
-            content: 'Ocean',
-        },
-        {
-            id: 'midnight',
-            content: 'Midnight',
-        },
-        {
-            id: 'space',
-            content: 'Space'
-        },
-        {
-            id: 'morning',
-            content: 'Morning',
-        },
-        {
-            id: 'terminal',
-            content: 'Terminal',
-        },
-        {
-            id: 'resilent',
-            content: 'Resilient',
-        }
-    ]
+    const themes = await fetch('/themes.json');
           
           
     const selection = new Selection(app);
