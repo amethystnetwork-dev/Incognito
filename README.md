@@ -21,7 +21,7 @@
          You can find more info on the <a href="https://github.com/IDontCodee/Incognito/">wiki</a>
          <br>
          <br>
-         If that does not answer your question or you want to share the link you made, join our <a href="https://discord.gg/J3VPy5Vy8x">Discord server</a>
+         If that does not answer your question or you want to share the link you made, join our <a href="#discord-server">Discord server</a>
 </div>
 
 ## Overview
@@ -29,12 +29,13 @@
 - [Features](#features)
 - [FAQ](#faq)
 - [More](#more)
+  - [Discord Server](#discord-server)
   - [Proxy Sources](#proxy-sources)
   - [Credits](#credits)
 
 
 ## Features
-g
+
 - Ultraviolet
 - Nice game library
 - Tab Cloaks
@@ -51,6 +52,10 @@ You should join the official [Titanium Network Discord](https://discord.gg/unblo
 This repo is for people that want a easy way to deploy Incognito to cloud hosting services like Railway. If you just want to use Incognito and not deploy it, I recommend you get a official Incognito domain (Check above for how to do so)
 
 ## More
+
+### Discord Server
+
+https://discord.gg/J3VPy5Vy8x
 
 ### Proxy Sources
 
