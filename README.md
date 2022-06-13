@@ -16,11 +16,15 @@
          
 <div align="center">
          To get started, press one of the buttons above to deploy Incognito
+         <br>
+         <br>
+         You can find more info on the <a href="https://github.com/IDontCodee/Incognito/">wiki</a>
+         <br>
+         <br>
+         If that does not answer your question or you want to share the link you made, join our <a href="https://discord.gg/J3VPy5Vy8x">Discord server</a>
 </div>
 
 ## Overview
-
-You can find more info over on the [Wiki](https://github.com/IDontCodee/Incognito/wiki)
 
 - [Features](#features)
 - [FAQ](#faq)
@@ -30,7 +34,7 @@ You can find more info over on the [Wiki](https://github.com/IDontCodee/Incognit
 
 
 ## Features
-
+g
 - Ultraviolet
 - Nice game library
 - Tab Cloaks
