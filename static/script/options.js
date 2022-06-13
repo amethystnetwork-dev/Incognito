@@ -8,8 +8,32 @@ async function options(app) {
     app.search.input.style.display = 'none';
 
     const tabs = new Tabs(app);
-    const temp1 = await fetch('/themes.json');
-    const themes = await temp.json();
+    const themes = [
+        {
+            id: 'ocean',
+            content: 'Ocean',
+        },
+        {
+            id: 'midnight',
+            content: 'Midnight',
+        },
+        {
+            id: 'space',
+            content: 'Space'
+        },
+        {
+            id: 'morning',
+            content: 'Morning',
+        },
+        {
+            id: 'terminal',
+            content: 'Terminal',
+        },
+        {
+            id: 'resilent',
+            content: 'Resilient',
+        }
+    ]
           
           
     const selection = new Selection(app);
@@ -362,4 +386,4 @@ async function createAbout(app) {
 
 };
 
-export { options };
+export { options }
