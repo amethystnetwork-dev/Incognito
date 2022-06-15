@@ -26,11 +26,8 @@
 
 ## Discord Server
 
-[![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/J3VPy5Vy8x)
-
-<!-- Hi there -->
 <a class="discord-widget" href="https://discord.gg/J3VPy5Vy8x" title="Join us on Discord">
-<img src="https://discordapp.com/api/guilds/$server-id/widget.png?style=banner2" <="" img="">        </a>
+<img src="https://discordapp.com/api/guilds/985982201302769765/widget.png?style=banner2" <="" img="">        </a>
 
 ## Overview
 
