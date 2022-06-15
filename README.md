@@ -27,7 +27,7 @@
 ## Discord Server
 
 <a class="discord-widget" href="https://discord.gg/J3VPy5Vy8x" title="Join us on Discord">
-<img src="https://discordapp.com/api/guilds/985982201302769765/widget.png?style=banner2" <="" img="">        </a>
+<img src="https://discordapp.com/api/guilds/985982201302769765/widget.png?style=banner2"></a>
 
 ## Overview
 
