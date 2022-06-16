@@ -1,3 +1,9 @@
+# NOTICE:
+
+There are currently security vulnerabilities in packages used. You may want to wait to deploy until they are fixed.
+
+In the meantime, join our discord [(link below)](#discord-server)
+
 <div align="center">
          
 <img style="border-radius:50%" height="150px" src="https://raw.githubusercontent.com/IDontCodee/Incognito/main/static/index.svg">
