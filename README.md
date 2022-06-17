@@ -1,8 +1,3 @@
-# NOTICE:
-
-There are currently security vulnerabilities in packages used. You may want to wait to deploy until they are fixed.
-
-In the meantime, join our discord [(link below)](#discord-server)
 
 <div align="center">
          
