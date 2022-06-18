@@ -91,17 +91,13 @@
       "title": "Chrome Dinosaur",
       "author": "Google",
       "category": "web",
-      "description": "The Dinosaur Game is a browser game developed by Google and built into the Google Chrome web browser. The player guides a pixelated Tyrannosa"description": "The Dinosaur Game is a browser game developed by Google and built into the Google Chrome web browser. The player guides a pixelated Tyrannosaurus rex across a side-scrolling landscape, avoiding obstacles to achieve a higher score."
-    },
-        {
-urus rex across a side-scrolling landscape, avoiding obstacles to achieve a higher score."
+      "description": "The Dinosaur Game is a browser game developed by Google and built into the Google Chrome web browser. The player guides a pixelated Tyrannosaurus rex across a side-scrolling landscape, avoiding obstacles to achieve a higher score."
     },
         {
       "img": "./img/gs/fridaynightfunkin.jpg",
-      "location": "/source/fridaynightfunkin
-      "title": "Friday Night Funkin
-       "description": "Cookie Clicker is an idle clicker game. Bake millions of delicious cookies by clicking on a giant cookie.",
-       "category": "web",
+      "location": "/source/fridaynightfunkin",
+      "title": "Friday Night Funkin",
+       "category": "web"
     },
     {
       "img": "./img/gs/cookie-clicker.jpg",
