@@ -32,7 +32,15 @@ async function options(app) {
         {
             id: 'resilent',
             content: 'Resilient',
-        }
+        },
+	{
+	    id: 'fancy',
+	    content: 'Fancy',
+	},
+	{
+	    id: 'simple',
+	    content: 'Simple',
+	}
     ]
           
           
