@@ -18,6 +18,10 @@ async function options(app) {
             content: 'Midnight',
         },
         {
+            id: 'simple',
+            content: 'Simple',
+        },
+        {
             id: 'space',
             content: 'Space'
         },
@@ -32,6 +36,10 @@ async function options(app) {
         {
             id: 'resilent',
             content: 'Resilient',
+        },
+        {
+            id: 'fancy',
+            content: 'Fancy'
         }
     ]
           

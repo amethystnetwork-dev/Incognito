@@ -11,6 +11,39 @@ body {
     --background: #161923;
     background: var(--background);
 }
+body[data-appearance="simple"] {
+    --border-color: rgb(255, 255, 255, 0.2);
+    --text-color: #fff;
+    --header-background: inherit;
+    --accent: #f0ecfc;
+    --scrollbar-thumb-color: rgb(240, 236, 252, 0.3);
+    --scrollbar-track-color: rgb(240, 236, 252, 0.1);
+    --font-family: Roboto;
+    --background: #16192b;
+    background: var(--background);
+  }
+  
+body .hu {
+    display: none;
+  }
+
+  body[data-appearance="fancy"] {
+    --border-color: rgb(255, 255, 255, 0.2);
+    --text-color: #fff;
+    --header-background: inherit;
+    --accent: #5e81ac;
+    --scrollbar-thumb-color: rgb(94, 129, 172, 0.3);
+    --scrollbar-track-color: rgb(94, 129, 172, 0.1);
+    --font-family: Roboto;
+    --background: #2e3440;
+  }
+
+  body[data-appearance="fancy"] .nav-logo {
+    display: none;
+  }
+  body[data-appearance="fancy"] .hu {
+    display: inline;
+  }
 
 body[data-appearance="morning"] {
     --background: #FFF;
