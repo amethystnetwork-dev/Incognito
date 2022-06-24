@@ -22,13 +22,13 @@
          You can find more info on the <a href="https://github.com/IDontCodee/Incognito/">wiki</a>
          <br>
          <br>
-         If that does not answer your question or you want to share the link you made, join our <a href="#discord-server">Discord server</a>
+         If that does not answer your question or you want to share the link you made, join our Discord server <a href="#discord-server">(link below).</a> 
 </div>
 
 ## Discord Server
 
 <a class="discord-widget" href="https://discord.gg/J3VPy5Vy8x" title="Join us on Discord">
-<img src="https://discordapp.com/api/guilds/985982201302769765/widget.png?style=banner2"></a>
+<img src="https://invidget.switchblade.xyz/J3VPy5Vy8x?theme=light"></a>
 
 ## Overview
 
