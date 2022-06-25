@@ -6,23 +6,21 @@
 <h1>Incognito</h1>
 
 <h3>Access the world wide web</h3>
+ 
+<a href="" alt="Made with NodeJS"><img src="https://img.shields.io/badge/Made%20with-Node.JS-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"></a> 
+<a href="https://github.com/IDontCodee/Incognito/issues/" alt="GitHub issues"><img src="https://img.shields.io/github/issues/IDontCodee/Incognito?style=for-the-badge"></a>
+<a href="https://github.com/IDontCodee/Incognito/graphs/contributors/" alt=""><img src="https://img.shields.io/github/contributors/IDontCodee/Incognito?style=for-the-badge"></a>
 
 </div>
 
-<p align="center">
+<div align="center">
+         <h2>Get Started</h2>
+         <a>To get started, press one of the buttons below to deploy Incognito</a>
+         <br>
+         <br>
 <a href="https://heroku.com/deploy?template=https://github.com/IDontCodee/Incognito"><img height="30px" src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"><img></a>
 <a href="https://github.com/IDontCodee/Incognito/wiki/About-Replit..."><img height="30px" src="https://raw.githubusercontent.com/IDontCodee/Incognito/main/deploy/replit.svg"><img></a>
 <a href="https://railway.app/new/template?template=https://github.com/IDontCodee/Incognito"><img height="30px" src="https://img.shields.io/badge/Railway-%234f0599.svg?style=for-the-badge&logo=railway&logoColor=white"><img></a>
-</p>
-         
-<div align="center">
-         To get started, press one of the buttons above to deploy Incognito
-         <br>
-         <br>
-         You can find more info on the <a href="https://github.com/IDontCodee/Incognito/">wiki</a>
-         <br>
-         <br>
-         If that does not answer your question or you want to share the link you made, join our Discord server <a href="#discord-server">(link below).</a> 
 </div>
 
 ## Discord Server
@@ -55,6 +53,10 @@ You should join the official [Titanium Network Discord](https://discord.gg/unblo
 **Who is this repo for?**
 
 This repo is for people that want a easy way to deploy Incognito to cloud hosting services like Railway. If you just want to use Incognito and not deploy it, I recommend you get a official Incognito domain (Check above for how to do so)
+
+**My question is not answered**
+
+Because we can't answer every question here, you may want to check the [wiki](https://github.com/IDontCodee/Incognito/wiki). If you still have questions, you might want to join our Discord [(link above)](#discord-server)
 
 ## More
 
