@@ -1,5 +1,5 @@
 { pkgs }: {
-	deps = [		pkgs.nodejs-18_x
+	deps = [		pkgs.nodejs-16_x
          pkgs.brave
          pkgs.nodePackages.typescript-language-server
          pkgs.nodePackages.yarn
