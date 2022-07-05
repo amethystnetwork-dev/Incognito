@@ -48,7 +48,8 @@ function access(app) {
         } 
     });
 
-    app.search.input.setAttribute( 'oninput',
+    app.search.input.setAttribute(
+        'oninput',
         '(' + (async function() {
             app.main.suggestions.innerHTML = '';
             if (!event.target.value) {
