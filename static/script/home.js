@@ -5,8 +5,8 @@ const tips = [
     'Access popular media & sites easily in <a href="#apps">apps.</a>',
     'This unofficial Incognito version is made by G&#173;it&#173;Hu&#173;b user IDo&#173;n&#173;tCod&#173;ee.',   
     'Join our <a href="#community">d&#173;i&#173;sco&#173;rd</a> ( not official )',
-    'Support Incognito at our <a href="https://www.patreon.com/incognitotn">Patreon.</a>'
-    'thanks to nrzt, You can now download our app on <a href="./download.android.html">android!</a>',
+    'Support Incognito at there <a href="https://www.patreon.com/incognitotn">Patreon.</a>'
+    'thanks to nrzt, You can now download our app on <a href="./download.android.html">android!',
 ];
 
 
