@@ -1,15 +1,16 @@
 {
   "dependencies": {
-    "bare-server-node": "github:tomphttp/bare-server-node",
+    "@tomphttp/bare-server-node": "^1.0.2-beta-readme5",
     "node-static": "^0.7.11"
   },
-  "name": "Incognito",
+  "name": "incognito",
+  "type": "module",
   "version": "1.0.0",
   "description": "Incognito with bare server",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ."
+    "start": "node index.js"
   },
   "keywords": [
     "titaniumnetwork",
