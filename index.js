@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import createBareServer from '@tomphttp/bare-server-node';
 import http from 'http';
 import nodeStatic from 'node-static';
@@ -24,3 +25,8 @@ server.on('upgrade', (req, socket, head) => {
 });
 
 server.listen(process.env.PORT || 8080);
+=======
+(async() => {
+  await import('./index.mjs');
+})();
+>>>>>>> parent of acd2908 (fix multiple indexes, type:module)
