@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "bare-server-node": "github:tomphttp/bare-server-node",
+    "node-static": "^0.7.11"
+  },
+  "name": "Incognito",
+  "version": "1.0.0",
+  "description": "Incognito with bare server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "keywords": [
+    "titaniumnetwork",
+    "ultraviolet"
+  ],
+  "author": "",
+  "license": "GPL-3.0-or-later"
+}

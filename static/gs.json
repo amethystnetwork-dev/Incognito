@@ -1,0 +1,250 @@
+[
+    {
+      "img": "./img/gs/krk.png",
+      "location": "./load.html#a3J1bmtlci5pbw%3D%3D",
+      "title": "Krunker.io",
+      "author": "Yendis Entertainment",
+      "description": "Krunker is a remarkable first-person shooter game where you fall right into a dark world, tasked with fighting against other players from around the world.",
+      "category": "multi",
+      "featured": true
+    },
+    {
+      "img": "./img/gs/moo.png",
+      "location": "./load.html#aHR0cHM6Ly9tb29tb28uaW8%3D",
+      "title": "Moomoo.io",
+      "author": "Yendis Entertainment",
+      "category": "multi",
+      "description": "MooMoo.io is a multiplayer base building and survival game. Collect resources around the map to build a village. Your Windmills generate points over time. But make sure to protect them from other players."
+    },
+    {
+      "img": "./img/gs/shellshockers.jpg",
+      "location": "./load.html#aHR0cHM6Ly9zaGVsbHNob2NrLmlv",
+      "category": "multi",
+      "title": "Shell Shockers"
+    },
+    {
+      "img": "./img/gs/skiribbl.png",
+      "location": "./load.html#aHR0cHM6Ly9za3JpYmJsLmlv",
+       "category": "multi",
+      "title": "Skribbl.io"
+    },
+    {
+      "img": "./img/gs/fn.png",
+      "location": "./load.html#aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL21hbGwvIy9kZWVwbGluaz9nYW1lLWlkPTQ2YmZhYjA2LWQ4NjQtNDY1ZC05ZTU2LTJkOWU0NWNkZWUwYQ%3D%3D",
+      "title": "Fortnite",
+      "category": "gfn"
+    },
+    {
+      "img": "./img/gs/sg.jpg",
+      "location": "./load.html#aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL21hbGwvIy9kZWVwbGluaz9nYW1lLWlkPTM5Njk5ZmI3LTVhMDUtNDFlNi04NmIyLTNjZDZmZDZjNDU5Yw%3D%3D",
+      "title": "Splitgate",
+      "category": "gfn"
+    },
+    {
+      "img": "./img/gs/1-on-1-soccer.jpg",
+      "location": "/source/swfs/#1on1soccer",
+      "title": "1 on 1 Soccer",
+      "description": "\r\n\r\nDon't you enjoy the straight-forward athletic duels on the field? In 1 on 1 Soccer, you get to face off against another player (Computer or real) in a 2 player football match. Run up against the ball to kick it across the field. Jump up in the air to move the ball with your head, or to simply stand on your opponent's. A match only lasts five minutes. Before you know it, you're itching for a rematch.\r\n\r\nThe easy gameplay makes this soccer match fun and addictive. Grab your best friend and play a duell to find out who can handle the ball better. Aim into your opponent's goal and try to keep it as far away as possible from your own. What are you waiting for? Have some sporty fun with those funny looking figures in 1 on 1 Soccer, online and for free on Silvergames.com!\r\n\r\nControls: WASD \/ Arrows = Move\/Jump\r\n"
+    },
+    {
+      "img": "./img/gs/1v1-lol.jpg",
+      "location": "./load.html#MXYxLmxvbA%3D%3D",
+      "title": "1v1.LOL",
+      "category": "multi",
+      "featured": true,
+      "description": "Discover 1v1, the online building simulator & third person shooting game. Battle royale, build fight, box fight, zone wars and more game modes to enjoy!"
+    },
+    {
+      "img": "./img/gs/2048.jpg",
+      "location": "/source/2048/",
+      "title": "2048",
+      "description": "Join the tiles, get to 2048!"
+    },
+    {
+      "img": "./img/gs/a-fancy-pants-adventure.jpg",
+      "location": "/source/swfs/#a-fancy-pants-adventure-world1",
+      "title": "A Fancy Pants Adventure",
+      "description": "In this game you take control of Fancy Pants - a cool stickman character who wears awesome and colorful pants! You must help our fancy hero work his way through a myriad of cool levels and avoid various obstacles, monsters and creatures on his way! "
+    },
+    {
+      "img": "./img/gs/alien-hominid.jpg",
+      "location": "/source/swfs/#alienhominid",
+      "title": "Alien Hominid",
+      "description": "Your UFO has crash landed, and the FBI is out to get you! Time to take them out!",
+      "author": "Tom Fulp"
+    },
+    {
+      "img": "./img/gs/astray.jpg",
+      "location": "/source/astray/",
+      "title": "Astray"
+    },
+    {
+      "img": "./img/gs/chroma.jpg",
+      "location": "/source/chroma/",
+      "title": "The Chroma Incident",
+      "description": "The Achromats have taken the worlds color offline! Raid their colorless lair and vanquish them all, restoring the world to it's technicolor glory.",
+      "author": "Ryan Malm"
+    },
+    {
+      "img": "./img/gs/chrome-dinosaur.jpg",
+      "location": "/source/dinosaur/",
+      "title": "Chrome Dinosaur",
+      "author": "Google",
+      "category": "web",
+      "description": "The Dinosaur Game is a browser game developed by Google and built into the Google Chrome web browser. The player guides a pixelated Tyrannosaurus rex across a side-scrolling landscape, avoiding obstacles to achieve a higher score."
+    },
+        {
+      "img": "./img/gs/fridaynightfunkin.jpg",
+      "location": "/source/fridaynightfunkin",
+      "title": "Friday Night Funkin",
+       "category": "web"
+    },
+    {
+      "img": "./img/gs/cookie-clicker.jpg",
+      "location": "/source/cookie/",
+      "title": "Cookie Clicker",
+      "category": "web",
+      "description": "Cookie Clicker is an idle clicker game. Bake millions of delicious cookies by clicking on a giant cookie.",
+      "author": "Orteil",
+      "featured": true
+    },
+    {
+      "img": "./img/gs/cubefield.jpg",
+      "location": "/source/cubefield/",
+      "title": "Cubefield",
+      "description": "Cubefield is a fast-paced endless running game that tests your ability to dodge obstacles at high speed.",
+      "author": "Nils Asejevs"
+    },
+    {
+      "img": "./img/gs/doodle-jump.jpg",
+      "location": "/source/doodle-jump/",
+      "title": "Doodle Jump",
+      "category": "web",
+      "author": "Lima Sky"
+    },
+    {
+      "img": "./img/gs/fireboy-and-watergirl-forest-temple.jpg",
+      "location": "/source/fireboy-and-watergirl-forest-temple/",
+      "title": "Fireboy & Watergirl Into the Forest Temple"
+    },
+    {
+      "img": "./img/gs/flappybird.jpg",
+      "location": "/source/flappybird/",
+      "category": "web",
+      "title": "Flappy Bird"
+    },
+        {
+      "img": "./img/gs/slope.jpg",
+      "location": "/source/slope/",
+      "category": "web",
+      "title": "Slope"
+    },
+    {
+      "img": "./img/gs/friendlyfire.jpg",
+      "location": "/source/friendlyfire/",
+      "title": "Friendly Fire"
+    },
+    {
+      "img": "./img/gs/geometry.jpg",
+      "location": "/source/geometry/",
+      "title": "Geometry Dash"
+    },
+    {
+      "img": "./img/gs/gopherkart.jpg",
+      "location": "/source/gopher-kart/",
+      "title": "Gopher Kart"
+    },
+    {
+      "img": "./img/gs/hexgl.jpg",
+      "location": "/source/hexgl/",
+      "title": "HexGL"
+    },
+    {
+      "img": "./img/gs/justfall-lol.jpg",
+      "location": "./load.html#anVzdGZhbGwubG9s",
+      "title": "Justfall.LOL"
+    },
+    {
+      "img": "./img/gs/littlebigsnake.jpg",
+      "location": "./load.html#bGl0dGxlYmlnc25ha2UuY29t",
+      "category": "multi",
+      "title": "LittleBigSnake"
+    },
+    {
+      "img": "./img/gs/minecraft.jpg",
+      "location": "/source/mc-classic/",
+      "title": "Minecraft Classic"
+    },
+    {
+      "img": "./img/gs/pacman.jpg",
+      "location": "/source/pacman/",
+      "title": "Pac Man"
+    },
+    {
+      "img": "./img/gs/paper-io.jpg",
+      "location": "./load.html#cGFwZXItaW8uY29t",
+      "title": "Paper.io",
+      "category": "multi"
+    },
+    {
+      "img": "./img/gs/portal2d.jpg",
+      "location": "/source/swfs/#portal2d",
+      "title": "Portal 2D"
+    },
+    {
+      "img": "./img/gs/radiusraid.jpg",
+      "location": "/source/radius-raid/",
+      "title": "Radius Raid"
+    },
+    {
+      "img": "./img/gs/retro-bowl.jpg",
+      "location": "/source/retro-bowl/",
+      "category": "web",
+      "title": "Retro Bowl"
+    },
+    {
+      "img": "./img/gs/sm64.jpg",
+      "location": "/source/sm64/",
+      "title": "Super Mario 64",
+      "category": "n64"
+    },
+    {
+      "img": "./img/gs/spaceinvaders.jpg",
+      "location": "/source/spaceinvaders/",
+      "title": "Space Invaders"
+    },
+    {
+      "img": "./img/gs/vex3.jpg",
+      "location": "/source/vex3/",
+      "title": "Vex 3",
+      "category": "web"
+    },
+    {
+      "img": "./img/gs/vex4.jpg",
+      "location": "/source/vex4/",
+      "title": "Vex 4",
+      "category": "web"
+    },
+    {
+      "img": "./img/gs/vex5.jpg",
+      "location": "/source/vex5/",
+      "title": "Vex 5",
+      "category": "web"
+    },
+    {
+      "img": "./img/gs/warfare1917.png",
+      "location": "/source/swfs/#warfare1917",
+      "title": "Warfare 1917"
+    },
+    {
+      "img": "./img/gs/warfare1944.jpg",
+      "location": "/source/swfs/#warfare1944",
+      "title": "Warfare 1944"
+    },
+    {
+      "img": "./img/gs/zombsroyale.jpg",
+      "location": "./load.html#em9tYnNyb3lhbGUuaW8%3D",
+      "title": "ZombsRoyale.io",
+      "category": "multi"
+    }
+  ]
