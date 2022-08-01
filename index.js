@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import createBareServer from '@tomphttp/bare-server-node';
 import http from 'http';
 import nodeStatic from 'node-static';
@@ -30,3 +31,8 @@ server.listen(process.env.PORT || 8080);
   await import('./index.mjs');
 })();
 >>>>>>> parent of acd2908 (fix multiple indexes, type:module)
+=======
+(async() => {
+  await import('./index.mjs');
+})();
+>>>>>>> parent of 3b21544 (Merge pull request #7 from e9x/main)
