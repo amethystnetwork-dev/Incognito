@@ -6,7 +6,7 @@ const tips = [
     'This unofficial Incognito version is made by G&#173;it&#173;Hu&#173;b user IDo&#173;n&#173;tCod&#173;ee.',   
     'Join our <a href="#community">d&#173;i&#173;sco&#173;rd</a> ( not official )',
     'Support Incognito at there <a href="https://www.patreon.com/incognitotn">Patreon.</a>',
-    'thanks to nrzt, You can now download our app on <a href="./download.android.html">android!'
+    'nrzt made a apk file of this website, <a href="https://ncdn2.swing2app.co.kr/public/APK/8237297/Incognito-0_2_debug.apk">here it is I guess?</a>'
 ];
 
 
