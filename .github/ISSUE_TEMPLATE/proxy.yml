@@ -1,0 +1,11 @@
+name: Proxy
+description: Anything about the proxy
+labels: [proxy]
+body:
+  - type: textarea
+    id: comment
+    attributes:
+      label: Comment
+      placeholder: Leave a comment
+    validations:
+      required: false
