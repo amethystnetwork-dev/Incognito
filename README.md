@@ -25,8 +25,7 @@
 
 ## Discord Server
 
-<a href="https://discord.gg/J3VPy5Vy8x" title="Join us on Discord">
-<img src="https://invidget.switchblade.xyz/J3VPy5Vy8x?theme=light"></a>
+[![Join us on Discord](https://invidget.switchblade.xyz/J3VPy5Vy8x?theme=light)](https://discord.gg/J3VPy5Vy8x)
 
 ## Overview
 
@@ -48,7 +47,9 @@
 
 **How can I get official Incognito domains?**
 
-You should join the official [Titanium Network Discord](https://discord.gg/unblock) for official links
+You should join the official Titanium Network Discord for official links
+
+[![Titanium Network Discord](https://invidget.switchblade.xyz/unblock?theme=light)](https://discord.gg/unblock)
 
 **Who is this repo for?**
 
