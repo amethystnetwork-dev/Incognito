@@ -1,4 +1,4 @@
 entrypoint = "README.md"
 run = "./repl.sh"
-onBoot = "chmod u+x repl.sh"
+onBoot = "chmod u+x repl.sh && chmod u+x webretro.sh"
 language = "nodejs"
