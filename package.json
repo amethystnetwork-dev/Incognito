@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@tomphttp/bare-server-node": "^1.0.2-beta-readme2",
     "bare-server-node": "github:tomphttp/bare-server-node",
     "node-static": "^0.7.11"
   },
@@ -9,7 +10,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ."
+    "start": "node index.js"
   },
   "keywords": [
     "titaniumnetwork",

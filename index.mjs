@@ -2,6 +2,7 @@ import Server from 'bare-server-node';
 import http from 'http';
 import nodeStatic from 'node-static';
 
+const port = process.env.PORT || 8080;
 
 const bare =  new Server('/bare/', '');
 const serve = new nodeStatic.Server('static/');
@@ -18,4 +19,6 @@ server.on('upgrade', (req, socket, head) => {
 	socket.end();
 });
 
-server.listen(process.env.PORT || 8080);
+server.listen(port);
+
+console.log("Server running on port " + port)
