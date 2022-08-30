@@ -1,3 +1,21 @@
+/*
+  _____                   _                _     _                                                                      
+ |  __ \                 | |              | |   | |                                                                     
+ | |__) |   ___    _ __  | |_    ___    __| |   | |__    _   _                                                          
+ |  ___/   / _ \  | '__| | __|  / _ \  / _` |   | '_ \  | | | |                                                         
+ | |      | (_) | | |    | |_  |  __/ | (_| |   | |_) | | |_| |                                                         
+ |_|       \___/  |_|     \__|  \___|  \__,_|   |_.__/   \__, |                                                         
+                                                          __/ |                                                         
+                                                         |___/                                                          
+                                _     _                     _       _   _          _                               _    
+     /\                        | |   | |                   | |     | \ | |        | |                             | |   
+    /  \     _ __ ___     ___  | |_  | |__    _   _   ___  | |_    |  \| |   ___  | |_  __      __   ___    _ __  | | __
+   / /\ \   | '_ ` _ \   / _ \ | __| | '_ \  | | | | / __| | __|   | . ` |  / _ \ | __| \ \ /\ / /  / _ \  | '__| | |/ /
+  / ____ \  | | | | | | |  __/ | |_  | | | | | |_| | \__ \ | |_    | |\  | |  __/ | |_   \ V  V /  | (_) | | |    |   < 
+ /_/    \_\ |_| |_| |_|  \___|  \__| |_| |_|  \__, | |___/  \__|   |_| \_|  \___|  \__|   \_/\_/    \___/  |_|    |_|\_\
+                                               __/ |                                                                    
+                                              |___/                                                                     
+*/
 import { Selection } from './selection.js';
 import { Tabs } from './tabs.js';
 
@@ -229,12 +247,29 @@ async function options(app) {
                     }
                 }),
                 app.createElement('button', 'Go about:blank', {
-                    attrs: {
-                        class: 'blank-button',
-                        onclick: 'goBlank();'
-                    },
                     style: {
-                        width: '300px',
+                        'width': '300px',
+                        display: 'inline-block',
+                        'padding': '14px 18px',
+                        'margin': '5px 0',
+                        'color': 'var(--text-color)',
+                        'text-decoration': 'none',
+                        'font-size': '14px',
+                        'background': '0 0',
+                        'border': '1px solid var(--border-color)',
+                        'border-radius': '2px',
+                        'outline': 'none',
+                        'font-family': 'inherit',
+                    },
+                    events: {
+                        click() {
+                            goBlank()
+                        }
+                    }
+                }),
+                app.createElement('p', 'Use about:blank to cloak your tab.', {
+                    style: {
+                        'margin-bottom': '0'
                     }
                 })
             ], {
@@ -301,6 +336,7 @@ async function createAbout(app) {
     const authors = [];
     const socials = [];
     const contacts = [];
+    const amethyst = [];
 
     for (const entry of json.authors) {
         authors.push(
@@ -332,6 +368,17 @@ async function createAbout(app) {
         )
     };
 
+    for (const entry of json.amethyst) {
+        amethyst.push(
+            app.createElement('p', `${entry.name}${entry.data ? ' - ' + entry.data : ''}`, {
+                style: {
+                    'margin-bottom': '0'
+                }
+            })
+        )
+    };
+
+
     return [
         app.createElement('section', [
             app.createElement('span', json.main.title, {
@@ -360,6 +407,19 @@ async function createAbout(app) {
                 }
             }),
             app.createElement('div', authors)
+        ], {
+            class: 'data-section'
+        }),
+        app.createElement('section', [
+            app.createElement('span', 'Amethyst Network', {
+                style: {
+                    display: 'block',
+                    'margin-bottom': '6px',
+                    'font-size': '18px',
+                    'font-weight': '500'
+                }
+            }),
+            app.createElement('div', amethyst)
         ], {
             class: 'data-section'
         }),

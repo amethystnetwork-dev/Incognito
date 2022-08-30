@@ -1,10 +1,27 @@
-
+/*
+  _____                   _                _     _                                                                      
+ |  __ \                 | |              | |   | |                                                                     
+ | |__) |   ___    _ __  | |_    ___    __| |   | |__    _   _                                                          
+ |  ___/   / _ \  | '__| | __|  / _ \  / _` |   | '_ \  | | | |                                                         
+ | |      | (_) | | |    | |_  |  __/ | (_| |   | |_) | | |_| |                                                         
+ |_|       \___/  |_|     \__|  \___|  \__,_|   |_.__/   \__, |                                                         
+                                                          __/ |                                                         
+                                                         |___/                                                          
+                                _     _                     _       _   _          _                               _    
+     /\                        | |   | |                   | |     | \ | |        | |                             | |   
+    /  \     _ __ ___     ___  | |_  | |__    _   _   ___  | |_    |  \| |   ___  | |_  __      __   ___    _ __  | | __
+   / /\ \   | '_ ` _ \   / _ \ | __| | '_ \  | | | | / __| | __|   | . ` |  / _ \ | __| \ \ /\ / /  / _ \  | '__| | |/ /
+  / ____ \  | | | | | | |  __/ | |_  | | | | | |_| | \__ \ | |_    | |\  | |  __/ | |_   \ V  V /  | (_) | | |    |   < 
+ /_/    \_\ |_| |_| |_|  \___|  \__| |_| |_|  \__, | |___/  \__|   |_| \_|  \___|  \__|   \_/\_/    \___/  |_|    |_|\_\
+                                               __/ |                                                                    
+                                              |___/                                                                     
+*/
 const tips = [
-    'Modify Incognitos appearance & browser tab in <a href="#settings">settings.</a>',
+    'Modify Inc&#173;ogni&#173;tos appearance & browser tab in <a href="#settings">settings.</a>',
     'You can enable about:blank tab cloaking in <a href="#settings">settings.</a>',
     'Access popular media & sites easily in <a href="#apps">apps.</a>',
-    'This unofficial Incognito version is made by G&#173;it&#173;Hu&#173;b user IDo&#173;n&#173;tCod&#173;ee.',
-    'Join our <a href="#community">d&#173;i&#173;sco&#173;rd</a> ( not official )'
+    'This <a href=\"https://github.com/IDontCodee/Incognito\">unofficial In&#173;cog&#173;nito version</a> is made by Am&#173;et&#173;hy&#173;st Net&#173;wo&#173;rk.',
+    'Join the <a href="#community">Am&#173;et&#173;hyst Ne&#173;tw&#173;ork d&#173;i&#173;sco&#173;rd</a>'
 ];
 
 

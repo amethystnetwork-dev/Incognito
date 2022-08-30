@@ -1,3 +1,21 @@
+/*
+  _____                   _                _     _                                                                      
+ |  __ \                 | |              | |   | |                                                                     
+ | |__) |   ___    _ __  | |_    ___    __| |   | |__    _   _                                                          
+ |  ___/   / _ \  | '__| | __|  / _ \  / _` |   | '_ \  | | | |                                                         
+ | |      | (_) | | |    | |_  |  __/ | (_| |   | |_) | | |_| |                                                         
+ |_|       \___/  |_|     \__|  \___|  \__,_|   |_.__/   \__, |                                                         
+                                                          __/ |                                                         
+                                                         |___/                                                          
+                                _     _                     _       _   _          _                               _    
+     /\                        | |   | |                   | |     | \ | |        | |                             | |   
+    /  \     _ __ ___     ___  | |_  | |__    _   _   ___  | |_    |  \| |   ___  | |_  __      __   ___    _ __  | | __
+   / /\ \   | '_ ` _ \   / _ \ | __| | '_ \  | | | | / __| | __|   | . ` |  / _ \ | __| \ \ /\ / /  / _ \  | '__| | |/ /
+  / ____ \  | | | | | | |  __/ | |_  | | | | | |_| | \__ \ | |_    | |\  | |  __/ | |_   \ V  V /  | (_) | | |    |   < 
+ /_/    \_\ |_| |_| |_|  \___|  \__| |_| |_|  \__, | |___/  \__|   |_| \_|  \___|  \__|   \_/\_/    \___/  |_|    |_|\_\
+                                               __/ |                                                                    
+                                              |___/                                                                     
+*/
 function community(app) {
     app.search.title.style.display = 'block';
     app.search.title.textContent = 'Community';
@@ -6,7 +24,7 @@ function community(app) {
         'div', 
         [
             app.createElement('section', [
-                app.createElement('p', 'You are being taken to the unofficial Incog server (discord.gg/J3VPy5Vy8x).', {
+                app.createElement('p', 'You are being taken to the Amethyst Network server (discord.gg/J3VPy5Vy8x).', {
                         style: {
                             'margin-bottom': '0'
                         }

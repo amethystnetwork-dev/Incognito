@@ -5,7 +5,7 @@
     },
     {
         "question": "Is my information secure",
-        "answer": "Yes, your informaton is as secure as the sites visiting them. Our SSL encryption ensures even more that it is secure."
+        "answer": "Incognito, in its unmodified state from its <a href=\"https://github.com/IDontCodee/Incognito\">Git&#173;Hu&#173;b repo</a>, does not collect your data. However, users can host thier own instance of this website that could have been modified to collect user data"
     },
     {
         "question": "Why is GeForce Now is responding with \"403 Access Denied\"",
