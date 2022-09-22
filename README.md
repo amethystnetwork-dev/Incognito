@@ -42,8 +42,7 @@
 - [Features](#features)
 - [FAQ](#faq)
 - [More](#more)
-  - [Proxy Sources](#proxy-sources)
-  - [Credits](#credits)
+- [Credits](#credits)
 
 
 ## Features
@@ -67,14 +66,8 @@ This repo is for people that want a easy way to deploy Incognito to cloud hostin
 
 **My question is not answered**
 
-Because we can't answer every question here, you may want to check the [wiki](https://github.com/IDontCodee/Incognito/wiki). If you still have questions, you might want to join our Discord [(link above)](#discord-server)
+Because we can't answer every question here, you may want to check the [wiki](https://github.com/IDontCodee/Incognito/wiki). If you still have questions, you might want to join our Discord [#discord-server](#discord-server)
 
-## More
-
-### Proxy Sources
-
-[Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet)
-
-### Credits
+## Credits
 
 [Caracal.js](https://github.com/caracal-js) - Creator of Incognito
