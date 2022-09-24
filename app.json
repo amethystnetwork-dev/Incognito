@@ -1,7 +1,7 @@
 {
     "name": "Incognito",
-    "description": "Incognito with bare server",
+    "description": "Unofficial Incognito easy deployment version with TompHTTP bare server included.",
     "repository": "https://github.com/IDontCodee/Incognito",
     "logo": "https://github.com/IDontCodee/Incognito/blob/main/static/index.svg?raw=true",
-    "keywords": ["titaniumnetwork", "ultraviolet"]
+    "keywords": ["unoffical", "ultraviolet", "unblock", "titaniumnetwork", "bypass-filter"]
 }
