@@ -11,14 +11,9 @@
 <!-- The font is called Big, if you are wondering -->
 <div align="center">
          
-<img style="border-radius:50%" height="150px" src="https://raw.githubusercontent.com/IDontCodee/Incognito/main/static/index.svg">
+<img src="https://socialify.git.ci/IDontCodee/Incognito/image?description=1&descriptionEditable=Access%20the%20world%20wide%20web&font=Inter&forks=1&issues=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2FIDontCodee%2FIncognito%2Fmain%2Fstatic%2Findex.svg&name=1&owner=1&pattern=Solid&stargazers=1&theme=Light" alt="Incognito" width="640" height="320" />
 
-<h1>Incognito</h1>
-
-<h3>Access the world wide web</h3>
- 
 <a href="" alt="Made with NodeJS"><img src="https://img.shields.io/badge/Made%20with-Node.JS-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"></a> 
-<a href="https://github.com/IDontCodee/Incognito/issues/" alt="GitHub issues"><img src="https://img.shields.io/github/issues/IDontCodee/Incognito?style=for-the-badge"></a>
 <a href="https://github.com/IDontCodee/Incognito/graphs/contributors/" alt=""><img src="https://img.shields.io/github/contributors/IDontCodee/Incognito?style=for-the-badge"></a>
 
 </div>
