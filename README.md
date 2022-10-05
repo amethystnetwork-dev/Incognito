@@ -11,10 +11,10 @@
 <!-- The font is called Big, if you are wondering -->
 <div align="center">
          
-<img src="https://socialify.git.ci/IDontCodee/Incognito/image?description=1&descriptionEditable=Access%20the%20world%20wide%20web&font=Inter&forks=1&issues=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2FIDontCodee%2FIncognito%2Fmain%2Fstatic%2Findex.svg&name=1&owner=1&pattern=Solid&stargazers=1&theme=Light" alt="Incognito" width="640" height="320" />
+<img src="https://socialify.git.ci/amethystnetwork-dev/Incognito/image?description=1&descriptionEditable=Access%20the%20world%20wide%20web&font=Inter&forks=1&issues=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2Famethystnetwork-dev%2FIncognito%2Fmain%2Fstatic%2Findex.svg&name=1&owner=1&pattern=Solid&stargazers=1&theme=Light" alt="Incognito" width="640" height="320" />
 
 <a href="" alt="Made with NodeJS"><img src="https://img.shields.io/badge/Made%20with-Node.JS-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"></a> 
-<a href="https://github.com/IDontCodee/Incognito/graphs/contributors/" alt=""><img src="https://img.shields.io/github/contributors/IDontCodee/Incognito?style=for-the-badge"></a>
+<a href="https://github.com/amethystnetwork-dev/Incognito/graphs/contributors/" alt=""><img src="https://img.shields.io/github/contributors/amethystnetwork-dev/Incognito?style=for-the-badge"></a>
 
 </div>
 
@@ -23,11 +23,11 @@
          <a>To get started, press one of the buttons below to deploy Incognito</a>
          <br>
          <br>
-<a href="https://app.cyclic.sh/api/app/deploy/IDontCodee/Incognito"><img height="30px" src="https://img.shields.io/badge/cyclic-2e59c7.svg?style=for-the-badge&logo=cyclic&logoColor=white"><img></a>
-<a href="https://heroku.com/deploy?template=https://github.com/IDontCodee/Incognito"><img height="30px" src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"><img></a>
-<a href="https://github.com/IDontCodee/Incognito/wiki/About-Replit..."><img height="30px" src="https://raw.githubusercontent.com/IDontCodee/Incognito/main/deploy/replit.svg"><img></a>
-<a href="https://railway.app/new/template?template=https://github.com/IDontCodee/Incognito"><img height="30px" src="https://img.shields.io/badge/Railway-%234f0599.svg?style=for-the-badge&logo=railway&logoColor=white"><img></a>
-<a href="https://app.koyeb.com/deploy?type=git&repository=github.com/IDontCodee/Incognito&branch=main&name=incognito"><img height="30px" src="https://img.shields.io/badge/koyeb-121212.svg?style=for-the-badge&logo=koyeb&logoColor=87fcc4"><img></a>
+<a href="https://app.cyclic.sh/api/app/deploy/amethystnetwork-dev/Incognito"><img height="30px" src="https://img.shields.io/badge/cyclic-2e59c7.svg?style=for-the-badge&logo=cyclic&logoColor=white"><img></a>
+<a href="https://heroku.com/deploy?template=https://github.com/amethystnetwork-dev/Incognito"><img height="30px" src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"><img></a>
+<a href="https://github.com/amethystnetwork-dev/Incognito/wiki/About-Replit..."><img height="30px" src="https://raw.githubusercontent.com/amethystnetwork-dev/Incognito/main/deploy/replit.svg"><img></a>
+<a href="https://railway.app/new/template?template=https://github.com/amethystnetwork-dev/Incognito"><img height="30px" src="https://img.shields.io/badge/Railway-%234f0599.svg?style=for-the-badge&logo=railway&logoColor=white"><img></a>
+<a href="https://app.koyeb.com/deploy?type=git&repository=github.com/amethystnetwork-dev/Incognito&branch=main&name=incognito"><img height="30px" src="https://img.shields.io/badge/koyeb-121212.svg?style=for-the-badge&logo=koyeb&logoColor=87fcc4"><img></a>
 </div>
 
 ## Discord Server
@@ -63,7 +63,7 @@ This repo is for people that want a easy way to deploy Incognito to cloud hostin
 
 **My question is not answered**
 
-Because we can't answer every question here, you may want to check the [wiki](https://github.com/IDontCodee/Incognito/wiki). If you still have questions, you might want to join our Discord [#discord-server]((link)))
+Because we can't answer every question here, you may want to check the [wiki](https://github.com/amethystnetwork-dev/Incognito/wiki). If you still have questions, you might want to join our Discord [#discord-server]((link)))
 
 ## Credits
 
