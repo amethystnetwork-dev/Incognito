@@ -13,14 +13,8 @@
             "data": "Creator of <a href=\"https://github.com/tomphttp/\">TompHTTP</a>"
         },
         {
-            "name": "Amethyst Network",
+            "name": "<a href=\"https://github.com/amethystnetwork-dev/\">Amethyst Network</a>",
             "data": "Created deployable version"
-        }
-    ],
-    "amethyst": [
-        {
-            "name": "<a href=\"https://github.com/IDontCodee\">IDontCodee</a>",
-            "data": "Amethyst Network"
         }
     ],
     "socials": [
@@ -31,7 +25,7 @@
     ],
     "contact": [
         {
-            "name": "<a href=\"mailto:incognito@titaniumnetwork.org\">incognito@titaniumnetwork.org</a>"
+            "name": "<a href=\"mailto:example@example.com\">No email provided</a>"
         }
     ]
 }

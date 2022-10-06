@@ -336,7 +336,6 @@ async function createAbout(app) {
     const authors = [];
     const socials = [];
     const contacts = [];
-    const amethyst = [];
 
     for (const entry of json.authors) {
         authors.push(
@@ -368,15 +367,6 @@ async function createAbout(app) {
         )
     };
 
-    for (const entry of json.amethyst) {
-        amethyst.push(
-            app.createElement('p', `${entry.name}${entry.data ? ' - ' + entry.data : ''}`, {
-                style: {
-                    'margin-bottom': '0'
-                }
-            })
-        )
-    };
 
 
     return [
@@ -407,19 +397,6 @@ async function createAbout(app) {
                 }
             }),
             app.createElement('div', authors)
-        ], {
-            class: 'data-section'
-        }),
-        app.createElement('section', [
-            app.createElement('span', 'Amethyst Network', {
-                style: {
-                    display: 'block',
-                    'margin-bottom': '6px',
-                    'font-size': '18px',
-                    'font-weight': '500'
-                }
-            }),
-            app.createElement('div', amethyst)
         ], {
             class: 'data-section'
         }),

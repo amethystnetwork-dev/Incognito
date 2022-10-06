@@ -9,7 +9,7 @@
   "files": ["static", ".gitignore", "app.json", ".replit", "replit.nix", "Procfile", "webretro.sh"],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IDontCodee/Incognito"
+    "url": "git+https://github.com/amethystnetwork-dev/Incognito"
   },
   "keywords": ["unoffical", "ultraviolet", "unblock", "titaniumnetwork", "bypass-filter"],
   "author": "",
