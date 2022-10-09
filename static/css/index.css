@@ -1,15 +1,37 @@
 @import 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap';
-@import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap';
-@import 'https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap';
 @import 'appearance.css';
 @import 'fa/fa.css';
 @font-face {
-    font-family: material icons;
+    font-family: 'material icons';
     font-style: normal;
     font-weight: 400;
     src: url("./material.woff2") format('woff2');
 }
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-stretch: 100%;
+    src: url('./OpenSans-wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Ubuntu Mono';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./UbuntuMono.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Ubuntu Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./UbuntuMono.ttf') format('truetype');
+}
+  
+
+
 * {
     box-sizing: border-box;
     scrollbar-width: thin;
