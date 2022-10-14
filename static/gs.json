@@ -55,7 +55,7 @@
       "description": "Discover 1v1, the online building simulator & third person shooting game. Battle royale, build fight, box fight, zone wars and more game modes to enjoy!"
     },
     {
-      "img": "./img/gs/2048.jpg",
+      "img": "./img/gs/2048.png",
       "location": "/source/2048/",
       "title": "2048",
       "description": "Join the tiles, get to 2048!"
@@ -133,11 +133,14 @@
       "category": "web",
       "title": "Flappy Bird"
     },
-        {
+    {
       "img": "./img/gs/slope.jpg",
-      "location": "/source/slope/",
+      "location": "./source/slope/",
+      "title": "Slope",
+      "author": "Y8 Studios",
       "category": "web",
-      "title": "Slope"
+      "featured": true,
+      "description": "Slope is the ultimate running game that will put your skills to the test. Speed down on a randomized slope. The farther you go, the faster your ball travels. This game might look simple but playing this will give you extreme adrenaline rush. Just remember to avoid obstacles and those red blocks. Always be on track to get a high score and you might have your name on the leaderboard! "
     },
     {
       "img": "./img/gs/friendlyfire.jpg",
@@ -229,6 +232,12 @@
       "img": "./img/gs/vex5.jpg",
       "location": "/source/vex5/",
       "title": "Vex 5",
+      "category": "web"
+    },
+    {
+      "img": "./img/gs/vex6.jpg",
+      "location": "/source/vex6/",
+      "title": "Vex 6",
       "category": "web"
     },
     {

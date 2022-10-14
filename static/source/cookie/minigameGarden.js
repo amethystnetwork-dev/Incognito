@@ -910,7 +910,7 @@ M.launch=function()
 				weedMult:0.1,
 				req:200,
 				effsStr:'<div class="gray">&bull; tick every <b>5 minutes</b></div><div class="red">&bull; passive plant effects <b>-75%</b></div><div class="green">&bull; <b>35% chance</b> of collecting seeds automatically when plants expire</div><div class="green">&bull; weeds appear <b>10 times</b> less</div>',
-				q:'Dry soil made of small rocks tightly packed together. Not very conductive to plant health, but whatever falls off your crops will be easy to retrieve.<br>Useful if you\'re one of those farmers who just want to find new seeds without having to tend their garden too much.',
+				q:'Dry soil made of small rocks tightly packed together. Not very conducive to plant health, but whatever falls off your crops will be easy to retrieve.<br>Useful if you\'re one of those farmers who just want to find new seeds without having to tend their garden too much.',
 			},
 			'woodchips':{
 				name:'Wood chips',
@@ -1197,6 +1197,7 @@ M.launch=function()
 		M.tileTooltip=function(x,y)
 		{
 			return function(){
+				if (Game.keys[16]) return '';
 				var tile=M.plot[y][x];
 				if (tile[0]==0)
 				{
@@ -1204,7 +1205,7 @@ M.launch=function()
 					var str='<div style="padding:8px 4px;min-width:350px;text-align:center;">'+
 						'<div class="name">Empty tile</div>'+'<div class="line"></div><div class="description">'+
 							'This tile of soil is empty.<br>Pick a seed and plant something!'+
-							(me?'<div class="line"></div>Click to plant <b>'+me.name+'</b> for <span class="price'+(M.canPlant(me)?'':' disabled')+'">'+Beautify(Math.round(M.getCost(me)))+'</span>.<br><small>(Shift-click to plant multiple.)</small>':'')+
+							(me?'<div class="line"></div>Click to plant <b>'+me.name+'</b> for <span class="price'+(M.canPlant(me)?'':' disabled')+'">'+Beautify(Math.round(M.getCost(me)))+'</span>.<br><small>(Shift-click to plant multiple.)</small><br><small>(Holding the shift key pressed will also hide tooltips.)</small>':'')+
 							(M.plotBoost[y][x]!=[1,1,1]?('<small>'+
 								(M.plotBoost[y][x][0]!=1?'<br>Aging multiplier : '+Beautify(M.plotBoost[y][x][0]*100)+'%':'')+
 								(M.plotBoost[y][x][1]!=1?'<br>Effect multiplier : '+Beautify(M.plotBoost[y][x][1]*100)+'%':'')+
@@ -1269,7 +1270,7 @@ M.launch=function()
 		
 		M.refillTooltip=function(){
 			return '<div style="padding:8px;width:300px;font-size:11px;text-align:center;">Click to refill your soil timer and trigger <b>1</b> plant growth tick with <b>x3</b> spread and mutation rate for <span class="price lump">1 sugar lump</span>.'+
-				(Game.canRefillLump()?'<br><small>(can be done once every '+Game.sayTime((Game.getLumpRefillMax()/1000)*Game.fps,-1)+')</small>':('<br><small class="red">(usable again in '+Game.sayTime((Game.getLumpRefillRemaining()/1000+1)*Game.fps,-1)+')</small>'))+
+				(Game.canRefillLump()?'<br><small>(can be done once every '+Game.sayTime(Game.getLumpRefillMax(),-1)+')</small>':('<br><small class="red">(usable again in '+Game.sayTime(Game.getLumpRefillRemaining()+Game.fps,-1)+')</small>'))+
 			'</div>';
 		};
 		
@@ -1510,6 +1511,7 @@ M.launch=function()
 			Game.gainLumps(10);
 			Game.Notify('Sacrifice!','You\'ve sacrificed your garden to the sugar hornets, destroying your crops and your knowledge of seeds.<br>In the remains, you find <b>10 sugar lumps</b>.',[29,14],12);
 			
+			M.seedSelected=-1;
 			Game.Win('Seedless to nay');
 			M.convertTimes++;
 			M.computeMatures();
@@ -1835,6 +1837,7 @@ M.launch=function()
 		
 		M.buildPlot();
 		M.buildPanel();
+		M.computeEffs();
 		M.toCompute=true;
 		
 		setTimeout(function(M){return function(){M.onResize();}}(M),10);

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta
+			id="viewport"
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui, shrink-to-fit=no"
+		/>
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<title>Vex 6</title>
+
+		<link rel="icon" type="image/png" href="assets/icon.png" />
+		<!-- For apple devices -->
+		<link rel="apple-touch-icon" type="image/png" href="assets/icon.png" />
+		<link rel="stylesheet" href="assets/css/app.css" type="text/css" />
+	</head>
+
+	<body>
+		<div id="content"></div>
+		<div id="orientation"></div>
+
+		<script type="text/javascript">
+			var libs = [];
+			var gtag;
+
+			var gameName = 'vex6.min.js';
+
+			var fbrqLA = true,
+				fbrqBD = 8,
+				playBtn = true,
+				fbrqSA = false,
+				libs = [],
+				version = 'GameDistribution-25';
+
+			//This all here is for cache busting;
+			function addScript(src, buster, callback) {
+				var s = document.createElement('script');
+				s.setAttribute('src', src + '?v=' + buster);
+				if (typeof callback === 'function') {
+					s.onload = callback;
+				}
+				document.body.appendChild(s);
+			}
+
+			addScript(gameName, version, function () {});
+		</script>
+	</body>
+</html>
