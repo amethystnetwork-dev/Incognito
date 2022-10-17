@@ -29,6 +29,12 @@
       "title": "ev.io"
     },
     {
+      "img": "./img/gs/brutalio.jpg",
+      "location": "./load.aHR0cHM6Ly9icnV0YWwuaW8=",
+      "category": "multi",
+      "title": "brutal.io"
+    },
+    {
       "img": "./img/gs/skiribbl.png",
       "location": "./load.html#aHR0cHM6Ly9za3JpYmJsLmlv",
        "category": "multi",
