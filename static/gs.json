@@ -17,6 +17,12 @@
       "description": "MooMoo.io is a multiplayer base building and survival game. Collect resources around the map to build a village. Your Windmills generate points over time. But make sure to protect them from other players."
     },
     {
+      "img": "./img/gs/brutalio.jpg",
+      "location": "./load.html#YnJ1dGFsLmlv",
+      "category": "multi",
+      "title": "Brutal.io"
+    },
+    {
       "img": "./img/gs/shellshockers.jpg",
       "location": "./load.html#aHR0cHM6Ly9zaGVsbHNob2NrLmlv",
       "category": "multi",
