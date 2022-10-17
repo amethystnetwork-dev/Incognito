@@ -22,7 +22,8 @@ const tips = [
     'Access popular media & sites easily in <a href="#apps">apps.</a>',
     'hi',
     'Have you checked your grades at all this week?',
-    'Desmond, It is real... i own this site'
+    'Desmond, It is real... i own this site',
+    'better start working before that teacher gives you a F'
 ];
 
 
