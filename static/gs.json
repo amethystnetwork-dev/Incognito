@@ -35,6 +35,12 @@
       "title": "test"
     },
     {
+      "img": "./img/gs/Ev.png",
+      "location": "./load.html#aHR0cHM6Ly9taXh0YXBlaXNmaXJlLmdpdGh1Yi5pby9nYmEvbGF1bmNoZXIuaHRtbCNwb2tlbW9uZW1lcmFsZA==",
+      "category": "n64",
+      "title": "Pikimin Emerald"
+    },
+    {
       "img": "./img/gs/EyzDd94h_400x400.jpg",
       "location": "./load.html#aHR0cHM6Ly9wb2tlbW9uc2hvd2Rvd24uY29t",
       "category": "multi",
