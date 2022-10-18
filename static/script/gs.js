@@ -109,7 +109,7 @@ async function compileGs(app) {
         gba: [],
         sega: [],
         gfn: [],
-        emulator: [],
+        n64: [],
     };
 
     for (const entry of json) {
