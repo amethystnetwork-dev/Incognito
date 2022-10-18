@@ -37,7 +37,7 @@
     {
       "img": "./img/gs/PokemonEmeraldBox.jpg",
       "location": "./load.html#aHR0cHM6Ly9taXh0YXBlaXNmaXJlLmdpdGh1Yi5pby9nYmEvbGF1bmNoZXIuaHRtbCNwb2tlbW9uZW1lcmFsZA==",
-      "category": "n64",
+      "category": "emulator",
       "title": "Pikimin Emerald"
     },
     {
@@ -239,7 +239,7 @@
       "img": "./img/gs/sm64.jpg",
       "location": "/source/sm64/",
       "title": "Super Mario 64",
-      "category": "n64"
+      "category": "emulator"
     },
     {
       "img": "./img/gs/spaceinvaders.jpg",
