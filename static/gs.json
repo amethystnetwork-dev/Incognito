@@ -35,6 +35,12 @@
       "title": "test"
     },
     {
+      "img": "./img/gs/Rocket Bot Royale.png",
+      "location": "./load.html#aHR0cHM6Ly9yb2NrZXRib3Ryb3lhbGUud2ludGVycGl4ZWwuaW8=",
+      "category": "multi",
+      "title": "Rocket Bot Royale"
+    },
+    {
       "img": "./img/gs/EyzDd94h_400x400.jpg",
       "location": "./load.html#aHR0cHM6Ly9wb2tlbW9uc2hvd2Rvd24uY29t",
       "category": "multi",
