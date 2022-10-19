@@ -47,6 +47,12 @@
       "title": "Mortal Kombat"
     },
     {
+      "img": "./img/gs/Dragon_Ball_Z_Supersonic_Warriors.jpg",
+      "location": "./load.html#aHR0cHM6Ly9taXh0YXBlaXNmaXJlLmdpdGh1Yi5pby9nYmEvbGF1bmNoZXIuaHRtbCNkYnpfc3VwZXJzb25pYw==",
+      "category": "n64",
+      "title": "Dragon Ball Z Supersonic Warriors"
+    },
+    {
       "img": "./img/gs/EyzDd94h_400x400.jpg",
       "location": "./load.html#aHR0cHM6Ly9wb2tlbW9uc2hvd2Rvd24uY29t",
       "category": "multi",
