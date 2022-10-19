@@ -41,6 +41,12 @@
       "title": "Pikimin Emerald"
     },
     {
+      "img": "./img/gs/RocketBotRoyale.png",
+      "location": "./load.html#aHR0cHM6Ly93d3cuY3JhenlnYW1lcy5jb20vZW1iZWQvcm9ja2V0LWJvdC1yb3lhbGU=",
+      "category": "n64",
+      "title": "Rocket Bot Royale"
+    },
+    {
       "img": "./img/gs/mortalkombat.jfif",
       "location": "./load.html#aHR0cHM6Ly9taXh0YXBlaXNmaXJlLmdpdGh1Yi5pby9nYmEvbGF1bmNoZXIuaHRtbCNtb3J0YWxfa29tYmF0",
       "category": "n64",
