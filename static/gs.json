@@ -59,10 +59,28 @@
       "title": "Pikimin Mystery Dungons"
     },
     {
-      "img": "./img/gs/Pkmnmysterydungeon.jpg",
+      "img": "./img/gs/rubybox.jfif",
       "location": "./load.html#aHR0cHM6Ly9taXh0YXBlaXNmaXJlLmdpdGh1Yi5pby9nYmEvbGF1bmNoZXIuaHRtbCNwb2tlbW9ucnVieQ==",
       "category": "n64",
       "title": "Pikimin Ruby"
+    },
+    {
+      "img": "./img/gs/sapphirebox.jfif",
+      "location": "./load.html#aHR0cHM6Ly9taXh0YXBlaXNmaXJlLmdpdGh1Yi5pby9nYmEvbGF1bmNoZXIuaHRtbCNwb2tlbW9uc2FwcGhpcmU=",
+      "category": "n64",
+      "title": "Pikimin Sapphire"
+    },
+    {
+      "img": "./img/gs/marioluigisuperstarsbox.jfif",
+      "location": "./load.html#aHR0cHM6Ly9taXh0YXBlaXNmaXJlLmdpdGh1Yi5pby9nYmEvbGF1bmNoZXIuaHRtbCNzdXBlcnN0YXI=",
+      "category": "n64",
+      "title": "Mayo And Youwegey Superstar Saga"
+    },
+    {
+      "img": "./img/gs/sapphirebox.jfif",
+      "location": "./load.html#aHR0cHM6Ly9taXh0YXBlaXNmaXJlLmdpdGh1Yi5pby9nYmEvbGF1bmNoZXIuaHRtbCNwb2tlbW9uc2FwcGhpcmU=",
+      "category": "n64",
+      "title": "Pikimin Sapphire"
     },
     {
       "img": "./img/gs/RocketBotRoyale.png",
