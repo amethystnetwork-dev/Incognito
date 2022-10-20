@@ -41,6 +41,30 @@
       "title": "Pikimin Emerald"
     },
     {
+      "img": "./img/gs/PokemonLeafGreenbox.jpg",
+      "location": "./load.html#aHR0cHM6Ly9taXh0YXBlaXNmaXJlLmdpdGh1Yi5pby9nYmEvbGF1bmNoZXIuaHRtbCNwb2tlbW9uZW1lcmFsZA==",
+      "category": "n64",
+      "title": "Pikimin Leaf Green"
+    },
+    {
+      "img": "./img/gs/fireredbox.jfif",
+      "location": "./load.html#aHR0cHM6Ly9taXh0YXBlaXNmaXJlLmdpdGh1Yi5pby9nYmEvbGF1bmNoZXIuaHRtbCNwb2tlbW9ucmVk",
+      "category": "n64",
+      "title": "Pikimin Fire Red"
+    },
+    {
+      "img": "./img/gs/Pkmnmysterydungeon.jpg",
+      "location": "./load.html#aHR0cHM6Ly9taXh0YXBlaXNmaXJlLmdpdGh1Yi5pby9nYmEvbGF1bmNoZXIuaHRtbCNteXN0ZXJ5cmVk",
+      "category": "n64",
+      "title": "Pikimin Mystery Dungons"
+    },
+    {
+      "img": "./img/gs/Pkmnmysterydungeon.jpg",
+      "location": "./load.html#aHR0cHM6Ly9taXh0YXBlaXNmaXJlLmdpdGh1Yi5pby9nYmEvbGF1bmNoZXIuaHRtbCNwb2tlbW9ucnVieQ==",
+      "category": "n64",
+      "title": "Pikimin Ruby"
+    },
+    {
       "img": "./img/gs/RocketBotRoyale.png",
       "location": "./load.html#aHR0cHM6Ly93d3cuY3JhenlnYW1lcy5jb20vZW1iZWQvcm9ja2V0LWJvdC1yb3lhbGU=",
       "category": "multi",
