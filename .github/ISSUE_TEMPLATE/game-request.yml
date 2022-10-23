@@ -6,9 +6,6 @@ body:
     attributes:
       value: |
         Please join our discord server to submit a Game Request, only use this as a backup!
-  - type: markdown
-    attributes:
-      value: |
         [![Join us on Discord](https://invidget.switchblade.xyz/J3VPy5Vy8x?theme=light)](https://discord.gg/J3VPy5Vy8x)
   - type: dropdown
     id: type
@@ -18,6 +15,11 @@ body:
       options:
         - Website
         - HTML file (downloaded)
+      validations:
+        required: true
+  - type: markdown
+    attributes:
+      value: "Please keep the file size low for HTML files, as there is a size limit on some hosting providers"
   - type: input
     id: url
     attributes:
