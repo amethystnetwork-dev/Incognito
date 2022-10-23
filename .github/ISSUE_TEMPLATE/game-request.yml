@@ -13,7 +13,7 @@ body:
     attributes:
       label: Game Type
       multiple: false
-      options:a
+      options:
         - Website
         - HTML file (downloaded)
       validations:
