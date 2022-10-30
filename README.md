@@ -24,10 +24,8 @@
          <br>
          <br>
 <a href="https://amethystnetwork-dev.github.io/utils/deploy/heroku?repo=Incognito"><img height="30px" src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"><img></a>
-https://railway.app/new/template/TNmjSs?referralCode=8zUUBB
-<a [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/TNmjSs?referralCode=8zUUBB)</a>
 <a href="https://amethystnetwork-dev.github.io/utils/deploy/replit?repo=Incognito"><img height="30px" src="https://amethystnetwork-dev.github.io/assets/replit.svg"><img></a>
-<a href="https://railway.app/new/template?template=https://github.com/amethystnetwork-dev/Incognito"><img height="30px" src="https://img.shields.io/badge/Railway-%234f0599.svg?style=for-the-badge&logo=railway&logoColor=white"><img></a>
+<a href="https://railway.app/new/template/TNmjSs?referralCode=8zUUBB?template=https://github.com/amethystnetwork-dev/Incognito"><img height="30px" src="https://img.shields.io/badge/Railway-%234f0599.svg?style=for-the-badge&logo=railway&logoColor=white"><img></a>
 </div>
 
 ## Discord Server
