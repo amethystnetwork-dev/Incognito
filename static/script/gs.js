@@ -27,8 +27,7 @@ async function gs(app) {
         }
     });
     app.main.emptySearch = app.createElement('div', [
-        app.createElement('p', 'No results found.'),
-        app.createElement('p', '<p>Want to suggest a game to be added? Reach out to any staff in our <a href="https://discord.gg/unblock">community</a>.</p>')
+        app.createElement('p', 'No results found.')
     ], {
         class: 'gs-empty',
         style: {

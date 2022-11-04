@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <!--
+    <!--
     Incognito
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -19,7 +19,12 @@
     <script src="./uv/uv.bundle.js"></script>
     <script src="./uv/uv.config.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto&display=swap');
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: url('./css/Roboto-Regular.ttf') format('woff');
+        }
         body {
             background: #111;
             display: flex;
@@ -45,68 +50,79 @@
             margin: 35px 0px 0px 0px;
         }
         .lds-dual-ring {
-        display: inline-block;
-        width: 160px;
-        height: 160px;
+            display: inline-block;
+            width: 160px;
+            height: 160px;
         }
         .lds-dual-ring:after {
-        content: " ";
-        display: block;
-        width: 128px;
-        height: 128px;
-        margin: 16px;
-        border-radius: 50%;
-        border: 12px solid #fff;
-        border-color: #fff transparent #fff transparent;
-        animation: lds-dual-ring 1.2s linear infinite;
+            content: " ";
+            display: block;
+            width: 128px;
+            height: 128px;
+            margin: 16px;
+            border-radius: 50%;
+            border: 12px solid #fff;
+            border-color: #fff transparent #fff transparent;
+            animation: lds-dual-ring 1.2s linear infinite;
         }
         @keyframes lds-dual-ring {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
-</head> 
+</head>
 <body>
-
     <div class="msg">
         <div class="lds-dual-ring"></div>
         <p class="info">
-            Please wait a moment. 
-            Our service maybe under high load causing some slowness on our servers. Your request will eventually be responded to.
+            Please wait a moment.
+            Our service maybe under high load causing some slowness on our servers. Your request will eventually be
+            responded to.
         </p>
     </div>
-
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('./uv.sw-handler.js', {
                 scope: '/'
             }).then(() => {
-
-                let url = atob(
-                    decodeURIComponent(window.location.hash.slice(1))
-                );
-
-                if (!isUrl(url)) url = 'https://www.google.com/search?q=' + url;
-                else if (!(url.startsWith('https://') || url.startsWith('http://'))) {
-                    url = 'http://' + url;   
+                let url = atob(decodeURIComponent(window.location.hash.slice(1)));
+                let search;
+                switch (localStorage.getItem('incog||search')) {
+                    case 'google':
+                        search = 'https://google.com/search?q='
+                        break;
+                    case 'ddg':
+                        search = 'https://duckduckgo.com/?q='
+                        break;
+                    case 'bing':
+                        search = 'https://bing.com/search?q='
+                        break;
+                    case 'brave':
+                        search = 'https://search.brave.com/search?q='
+                        break;
+                    default:
+                        localStorage.setItem('incog||search', 'google')
+                        search = 'https://google.com/search?q='
                 };
-                window.location.href = __uv$config.prefix + __uv$config.encodeUrl(
-                    url
-                );
+                if (url) {
+                    if (!isUrl(url)) url = search + url;
+                    else if (!(url.startsWith('https://') || url.startsWith('http://'))) { url = 'http://' + url; };
+                } else { url = new URL(search).origin }
+                window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
             });
         } else {
             document.querySelector('.lds-dual-ring').remove();
-            document.querySelector('.info').textContent = 'Your browser appears to be in private browsing mode or is not compatabile. Try swapping or updating your browser.'
+            document.querySelector('.info').textContent = 'Your browser does not support service workers or is blocking them (private browsing mode?). Try swapping or updating your browser.'
         };
 
-        function isUrl(val = ''){
+        function isUrl(val = '') {
             if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
             return false;
-        };
+        }
     </script>
 </body>
 </html>
