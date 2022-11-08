@@ -1,6 +1,7 @@
-import createServer from '@tomphttp/bare-server-node';
+import createBareServer from '@tomphttp/bare-server-node';
 import { fileURLToPath } from "url";
-import https from "node:https";
+import { createServer as createHttpsServer } from "node:https";
+import { createServer as createHttpServer } from "node:http";
 import { readFileSync, existsSync } from "node:fs";
 import serveStatic from "serve-static";
 import analytics from './analytics.js';
@@ -9,15 +10,15 @@ import analytics from './analytics.js';
 console.log("Incognito\nThis program comes with ABSOLUTELY NO WARRANTY.\nThis is free software, and you are welcome to redistribute it\nunder the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nYou should have received a copy of the GNU General Public License\nalong with this program. If not, see <https://www.gnu.org/licenses/>.\n");
 
 var data = { live: 0, peak: 0, visits: 0 }
-const bare = createServer("/bare/");
+const bare = createBareServer("/bare/");
 const serve = serveStatic(fileURLToPath(new URL("../static/", import.meta.url)), { fallthrough: false });
-var ssl = {};
-if(existsSync("../ssl/key.pem") && existsSync("../ssl/cert.pem")) ssl = {
-  key: readFileSync("../ssl/key.pem"),
-  cert: readFileSync("../ssl/cert.pem")
-}; 
-
-const server = https.createServer(ssl);
+var server;
+if(existsSync("../ssl/key.pem") && existsSync("../ssl/cert.pem")) {
+  server = createHttpsServer({
+    key: readFileSync("../ssl/key.pem"),
+    cert: readFileSync("../ssl/cert.pem")
+  });
+} else server = createHttpServer();
 
 server.on("request", (req, res) => {
   if(bare.shouldRoute(req)) bare.routeRequest(req, res); else {

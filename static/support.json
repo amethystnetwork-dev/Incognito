@@ -14,9 +14,5 @@
     {
         "question": "Why is GeForce Now is responding with \"403 Access Denied\"",
         "answer": "At the moment, too many people are using GeForce Now on our servers. Try again later."
-    },
-    {
-        "question": "Google login is saying this app is insecure",
-        "answer": "At the moment, Google login is not supported for @gmail accounts. However, it is supported for GSuite accounts (School / work email)."
     }
 ]
