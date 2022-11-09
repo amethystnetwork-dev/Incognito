@@ -61,7 +61,7 @@ You should join the official Titanium Network Discord for official links
 
 **Who is this repo for?**
 
-This repo is for people that want a easy way to deploy Incognito to cloud hosting services like Railway. If you just want to use Incognito and not deploy it, I recommend you get a official Incognito domain (Check above for how to do so)
+This repo is for people that want an easy way to deploy Incognito to cloud hosting services like Railway. If you just want to use Incognito and not deploy it, I recommend you get an official Incognito domain (Check above for how to do so)
 
 **My question is not answered**
 
