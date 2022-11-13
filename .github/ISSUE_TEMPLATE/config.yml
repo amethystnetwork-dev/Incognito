@@ -1,8 +1,0 @@
-blank_issues_enabled: false
-contact_links:
-  - name: Don't see your issue here?
-    url: https://discord.gg/J3VPy5Vy8x
-    about: Join our discord for help and more support
-  - name: Heroku, Repl.it, Blocked site issues
-    url: https://www.youtube.com/embed/BLUkgRAy_Vo?mute=1&autoplay=1
-    about: Do not create issues for these.
