@@ -1,4 +1,4 @@
 entrypoint = "README.md"
 language = "nodejs"
 run = ["npm", "start"]
-onBoot = "chmod u+x webretro.sh"
+onBoot = "chmod u+x src/webretro.sh"
