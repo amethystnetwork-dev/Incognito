@@ -1,21 +1,27 @@
 {
-  "name": "Incognito",
+  "name": "incognito",
   "version": "1.0.0",
   "description": "Unofficial Incognito easy deployment version with TompHTTP bare server included.",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node src/index.js",
+    "install-webretro-linux": "chmod u+x ./src/webretro.sh && ./src/webretro.sh",
+    "install-webretro-win": "echo \"Error: not finshed\" && exit 1"
   },
-  "files": ["static", ".gitignore", "app.json", ".replit", "replit.nix", "Procfile", "webretro.sh"],
+  "files": ["static", "src", ".gitignore", "app.json", ".replit", "replit.nix", "Procfile"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/amethystnetwork-dev/Incognito"
   },
-  "keywords": ["unoffical", "ultraviolet", "unblock", "titaniumnetwork", "bypass-filter"],
+  "keywords": ["unoffical", "ultraviolet", "unblock", "titaniumnetwork", "bypass-filter", "amethystnetwork-dev"],
   "author": "",
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "@tomphttp/bare-server-node": "1.0.4-deps1",
     "serve-static": "^1.15.0"
-  }
+  },
+  "engines": {
+		"npm": ">=8.0.0",
+		"node": ">=16.0.0"
+	}
 }

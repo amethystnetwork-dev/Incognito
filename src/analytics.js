@@ -1,6 +1,6 @@
 import crypto from 'node:crypto'
 
-export default function analytics(req, res, data) {
+export default function(req, res, data) {
     switch(req.url) {
         case '/data/visit':
             data.live++
