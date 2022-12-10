@@ -8,7 +8,7 @@
     "install-webretro-linux": "chmod u+x ./src/webretro.sh && ./src/webretro.sh",
     "install-webretro-win": "echo \"Error: not finshed\" && exit 1"
   },
-  "files": ["static", "src", ".gitignore", "app.json", ".replit", "replit.nix", "Procfile"],
+  "files": ["static", "src", "ssl", ".gitignore", "app.json"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/amethystnetwork-dev/Incognito"
