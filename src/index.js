@@ -20,14 +20,13 @@ if(existsSync("../ssl/key.pem") && existsSync("../ssl/cert.pem")) {
 } else { server = createHttpServer(); PORT = (process.env.PORT || 8080);}
 
 server.on("request", (req, res) => {
-  if(bare.shouldRoute(req)) bare.routeRequest(req, res); else {
+  if(bare.shouldRoute(req)) return bare.routeRequest(req, res);
     serve(req, res, (err) => {
       res.writeHead(err?.statusCode || 500, null, {
         "Content-Type": "text/plain",
       });
       res.end('Error')
     })
-  }
 });
 
 server.on("upgrade", (req, socket, head) => {
