@@ -86,9 +86,7 @@
     </div>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./uv.sw-handler.js', {
-                scope: '/'
-            }).then(() => {
+            navigator.serviceWorker.register('./uv.sw-handler.js', { scope: __uv$config.prefix }).then(() => {
                 let url = atob(decodeURIComponent(window.location.hash.slice(1)));
                 let search;
                 switch (localStorage.getItem('incog||search')) {
