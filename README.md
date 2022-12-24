@@ -27,10 +27,18 @@ You CANNOT deploy to Vercel, Netifly, GitHub Pages, or Cloudflare pages. They ar
     <a>To get started, press one of the buttons below to deploy Incognito</a>
     <br>
     <br>
-    <a href="https://render.com/deploy?repo=https://github.com/amethystnetwork-dev/Incognito"><img height="30px" src="https://img.shields.io/badge/render-4f65f1.svg?style=for-the-badge&logo=render&logoColor=46e3b7"><img></a>
-    <a href="https://amethystnetwork-dev.github.io/utils/deploy/heroku?repo=Incognito"><img height="30px" src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"><img></a>
+    <a href="https://render.com/deploy?repo=https://github.com/amethystnetwork-dev/Incognito"><img height="30px" src="https://img.shields.io/badge/render-4f65f1.svg?style=for-the-badge&logo=render&logoColor=46e3b7"></img></a>
+    <a href="https://amethystnetwork-dev.github.io/utils/deploy/heroku?repo=Incognito"><img height="30px" src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"></img></a>
     <a href="https://amethystnetwork-dev.github.io/utils/deploy/replit?repo=Incognito"><img height="30px" src="https://amethystnetwork-dev.github.io/assets/replit.svg"><img></a>
-    <a href="https://railway.app/new/template/TNmjSs?referralCode=8zUUBB"><img height="30px" src="https://img.shields.io/badge/Railway-%234f0599.svg?style=for-the-badge&logo=railway&logoColor=white"><img></a>
+    <a href="https://railway.app/new/template/TNmjSs?referralCode=8zUUBB"><img height="30px" src="https://img.shields.io/badge/Railway-%234f0599.svg?style=for-the-badge&logo=railway&logoColor=white"></img></a>
+    <br>
+    <br>
+    <a>Or</a>
+    <br>
+    <br>
+    <a href="https://github.com/amethystnetwork-dev/Incognito/wiki/Manual-Deployment#terminal-with-deno"><img src="https://img.shields.io/badge/deno%20js-000000?style=for-the-badge&logo=deno&logoColor=white" alt="Deno JS"></img></a>
+    <a href="https://github.com/amethystnetwork-dev/Incognito/wiki/Manual-Deployment#terminal-with-nodejs"><img src="https://img.shields.io/badge/terminal-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Terminal"></img></a>
+    <a href="https://github.com/amethystnetwork-dev/Incognito/wiki/Manual-Deployment#docker-with-nodejs"><img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"></img></a>
 </div>
 
 ## Discord Server
