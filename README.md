@@ -76,7 +76,7 @@ This repo is for people that want an easy way to deploy Incognito to cloud hosti
 
 **My question is not answered**
 
-Because we can't answer every question here, you may want to check the [wiki](https://github.com/amethystnetwork-dev/Incognito/wiki). If you still have questions, you might want to join our Discord [#discord-server (link)](#discord-server)
+Because we can't answer every question here, you may want to check the [docs](https://amethystnetwork-dev.github.io/docs/category/incognito). If you still have questions, you might want to join our Discord [#discord-server (link)](#discord-server)
 
 ## Credits
 
