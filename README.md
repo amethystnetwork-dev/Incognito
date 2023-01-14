@@ -74,6 +74,12 @@ You should join the official Titanium Network Discord for official links
 
 This repo is for people that want an easy way to deploy Incognito to cloud hosting services like Railway. If you just want to use Incognito and not deploy it, I recommend you get an official Incognito domain (Check above for how to do so)
 
+**What proxies are used?**
+
+Incognito uses [Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet) as its only proxy.
+
+Ultraviolet has some known limitations such as downloading files can be buggy and pages may not load.
+
 **My question is not answered**
 
 Because we can't answer every question here, you may want to check the [docs](https://amethystnetwork-dev.github.io/docs/category/incognito). If you still have questions, you might want to join our Discord [#discord-server (link)](#discord-server)
