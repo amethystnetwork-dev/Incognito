@@ -5,7 +5,6 @@
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
-    "create-dockerfile": "echo \"Error: not finshed\" && exit 1",
     "install-webretro-linux": "chmod u+x ./src/webretro.sh && ./src/webretro.sh",
     "install-webretro-win": "echo \"Error: not finshed\" && exit 1"
   },

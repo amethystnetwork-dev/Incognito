@@ -36,9 +36,9 @@ You CANNOT deploy to Vercel, Netifly, GitHub Pages, or Cloudflare pages. They ar
     <a>Or</a>
     <br>
     <br>
-    <a href="https://github.com/amethystnetwork-dev/Incognito/wiki/Manual-Deployment#terminal-with-deno"><img src="https://img.shields.io/badge/deno%20js-000000?style=for-the-badge&logo=deno&logoColor=white" alt="Deno JS"></img></a>
-    <a href="https://github.com/amethystnetwork-dev/Incognito/wiki/Manual-Deployment#terminal-with-nodejs"><img src="https://img.shields.io/badge/terminal-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Terminal"></img></a>
-    <a href="https://github.com/amethystnetwork-dev/Incognito/wiki/Manual-Deployment#docker-with-nodejs"><img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"></img></a>
+    <a href="https://amethystnetwork-dev.github.io/docs/projects/incognito/manual-deployment/#terminal-with-deno"><img src="https://img.shields.io/badge/deno%20js-000000?style=for-the-badge&logo=deno&logoColor=white" alt="Deno JS"></img></a>
+    <a href="https://amethystnetwork-dev.github.io/docs/projects/incognito/manual-deployment/#terminal-with-nodejs"><img src="https://img.shields.io/badge/terminal-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Terminal"></img></a>
+    <a href="https://amethystnetwork-dev.github.io/docs/projects/incognito/manual-deployment/#docker-with-nodejs"><img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"></img></a>
 </div>
 
 ## Discord Server
