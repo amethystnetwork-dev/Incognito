@@ -26,27 +26,6 @@
         <link rel="stylesheet" href="css/index.css">
         <link rel="icon" href="" id="favicon">
         <script src="./script/particles.js"></script>
-            <script async>
-            // Incognito analytics
-            // Only tracks user visits!
-            // Remove when needed.
-            /*
-            navigator.sendBeacon('./data/visit');
-            (async() => {
-                const res = await fetch('./data/create-id');
-                const id = await res.text();
-    
-                setInterval(() => {
-                    navigator.sendBeacon('./data/keep-alive', id);
-                }, 15000)
-    
-                window.addEventListener('beforeunload', () => {
-                    navigator.sendBeacon('./data/destroy', id);
-                });
-    
-            })();
-            */
-        </script>
     </head>
     <body>
         <script>document.body.setAttribute('data-appearance', (localStorage.getItem('incog||appearance')))</script>
