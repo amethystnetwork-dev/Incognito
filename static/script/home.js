@@ -20,8 +20,8 @@ const tips = [
     'Modify Inc&#173;ogni&#173;tos appearance & browser tab in <a href="#settings">settings.</a>',
     'You can enable about:blank tab cloaking in <a href="#settings">settings.</a>',
     'Access popular media & sites easily in <a href="#apps">apps.</a>',
-    'This <a href="https://github.com/amethystnetwork-dev/Incognito">unofficial In&#173;cog&#173;nito version</a> is made by Am&#173;et&#173;hy&#173;st Net&#173;wo&#173;rk.',
-    'Join the <a href="#community">Am&#173;et&#173;hyst Ne&#173;tw&#173;ork d&#173;i&#173;sco&#173;rd</a>',
+    'Lit!!!',
+    'Join the <a href="#community">As&#173;t&#173;ral Ne&#173;tw&#173;ork d&#173;i&#173;sco&#173;rd</a>',
     'Get answers to questions in <a href="#support">support</a>'
 ];
 
@@ -48,7 +48,7 @@ function access(app) {
     app.nav.community = app.createLink('#community', 'Community');
     app.nav.support = app.createLink('#support', 'Support');
     app.nav.apps = app.createLink('#apps', 'Apps');
-    app.nav.games = app.createLink('#gs', 'Games');
+   
     app.nav.settings = app.createLink('#settings', '<i class="fas fa-sliders-h secondary"></i>', {
         id: 'apps'
     })

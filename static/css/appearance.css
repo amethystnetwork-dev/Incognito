@@ -2,7 +2,7 @@ body {
     --border-color: rgb(255, 255, 255, .2);
     --text-color: #FFF;
     --header-background: inherit;
-    --accent: mediumseagreen;
+    --accent: Orange;
     --scrollbar-thumb-color: rgb(52, 184, 116, 0.3);
     --scrollbar-track-color: rgb(52, 184, 116, 0.1);
     --font-family: Roboto;

@@ -54,7 +54,7 @@ app.destroyParticles = function() {
 document.querySelector('#open-nav').addEventListener('click', app.openNav);
 document.querySelector('#close-nav').addEventListener('click', app.closeNav);
 
-document.title = localStorage.getItem('incog||title') || 'Incognito';
+document.title = localStorage.getItem('incog||title') || 'Venus';
 window.icon = document.querySelector('#favicon');
 
 icon.href = localStorage.getItem('incog||icon') || './index.svg';
@@ -79,7 +79,7 @@ app.on('init', () => {
             display: 'none',
         }
     });
-    app.search.logo = createLink('#', '<img class="hu" src="img/hu.png"  width="50px" height="50px"><svg class="nav-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 365.37 365.37"><defs>    <style>       .cls-1{    fill:none;    stroke-width:18px;}  .cls-1, .cls-2 {    stroke: var(--accent);    stroke-miterlimit:10;} .cls-2 {    fill: var(--accent);    stroke-width:5px;}    </style>  </defs><circle class="cls-1" cx="182.68" cy="182.68" r="173.68"></circle><path class="cls-2" d="M210.41,66.38A115.27,115.27,0,0,1,70.52,248.19,134,134,0,1,0,210.41,66.38Z" transform="translate(-17.32 -17.32)"></path></svg>', {
+    app.search.logo = createLink('#', '<img class="hu" src="img/hu.png"  width="50px" height="50px"><svg class="nav-logo" width="800px" height="800px" viewBox="0 0 24 24" fill="#161923" xmlns="http://www.w3.org/2000/svg"><path d="M5.29168 6C3.86656 7.59227 3 9.69494 3 12C3 12.6874 3.07706 13.3568 3.22302 14M5.29168 6C6.93964 4.15875 9.3345 3 12 3C16.2832 3 19.8675 5.99202 20.777 10M5.29168 6H12M20.777 10C20.9229 10.6432 21 11.3126 21 12C21 16.9706 16.9706 21 12 21C9.3345 21 6.93964 19.8412 5.29168 18M20.777 10H15M3.22302 14H13M3.22302 14C3.5665 15.5137 4.29154 16.8826 5.29168 18M5.29168 18H11M12 10H10" stroke="#FFA500" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M7.00073 10.0007L7.00003 10" stroke="#161923" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M16.0007 14.0007L16 14" stroke="#FFA500" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>', {
         style: {
             display: 'none'
         }
