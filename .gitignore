@@ -1,3 +1,5 @@
 node_modules
 ssl/cert.*
 ssl/key.*
+
+package-lock.json
