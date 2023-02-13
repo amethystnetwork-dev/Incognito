@@ -26,6 +26,7 @@ import { community } from './community.js';
 
 window.app = new App();
 
+app.bare = new Ultraviolet.BareClient(new URL(__uv$config.bare, window.location));
 
 switch(localStorage.getItem('incog||background')) {
     case 'stars':
@@ -172,9 +173,9 @@ document.querySelector('.access-link').addEventListener('click', () => {
     const frame = document.querySelector('.access-frame');
     const win = frame.contentWindow;
     
-    if (win.__uv) {
+    if (win.__uv$location) {
         navigator.clipboard.writeText(
-            new URL('./?link=' + encodeURIComponent(btoa(win.__uv.location.href)), location.href).href
+            new URL('./?link=' + encodeURIComponent(btoa(win.__uv$location.href)), location.href).href
         );
     };
 
@@ -189,14 +190,15 @@ document.querySelector('.access-panel').addEventListener('mouseenter', async eve
     const frame = document.querySelector('.access-frame');
     const win = frame.contentWindow;
 
+    const { bare } = app;
+
     if (win && win.__uv) {
         document.querySelector('.access-panel .controls input').value = Object.getOwnPropertyDescriptor(Document.prototype, 'title').get.call(win.document);
         const favi = document.querySelector.call(win.document, 'link[rel=icon]');
 
         if (favi && Object.getOwnPropertyDescriptor(HTMLLinkElement.prototype, 'href').get.call(favi)) {
-            const res = await win.__uv.client.fetch.fetch.call(
-                win,
-                Object.getOwnPropertyDescriptor(HTMLLinkElement.prototype, 'href').get.call(favi)
+            const res = await bare.fetch(
+                __uv$config.decodeUrl(Object.getOwnPropertyDescriptor(HTMLLinkElement.prototype, 'href').get.call(favi).replace(new URL(__uv$config.prefix, window.location.origin), ""))
             );
 
             const blob = await res.blob();
@@ -205,12 +207,7 @@ document.querySelector('.access-panel').addEventListener('mouseenter', async eve
             document.querySelector('.access-panel .controls .icon').src = url;
             URL.revokeObjectURL(url);
         } else {
-            const res = await win.__uv.client.fetch.fetch.call(
-                win,
-                win.__uv.rewriteUrl(
-                    '/favicon.ico'
-                )
-            );
+            const res = await bare.fetch(win.__uv.rewriteUrl('/favicon.ico'));
 
             const blob = await res.blob();
             const url = URL.createObjectURL(blob);

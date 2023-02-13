@@ -146,7 +146,7 @@ async function options(app) {
         localStorage.setItem('incog||disabletips', id)
     })
 
-    disableTips.switchSelector(localStorage.getItem('incog||disabletips') || 'enabled');
+    disableTips.switchSelector((localStorage.getItem('incog||disabletips') || 'enabled'));
 
     tabs.on('switch', id => {
         document.querySelectorAll('[data-selected]').forEach(node => {
@@ -242,12 +242,12 @@ async function options(app) {
                 events: {
                     keydown(event) {
                         if(event.key === 'Enter') {
-                            if(event.target.value == null || event.target.value == '') {} else {
+                            if(!(event.target.value == null || event.target.value == '')) {
                                 var url;
                                 try {url = new URL(event.target.value) } catch {
-                                    try {url = new URL('https://' + event.target.value)} catch {}
+                                    try {url = new URL('http://' + event.target.value)} catch {}
                                 }
-                                if(url) tabURL(url);
+                                if(url) tabURL(url.toString());
                             }
                         }
                     }
@@ -500,8 +500,8 @@ The about:blank script is based off of ABC by
         events: {
             click() {
                 tabs.switchTab('search');
-                searchSelection.switchSelector(localStorage.getItem('incog||search'));
-                searchSuggestionSelection.switchSelector(localStorage.getItem('incog||suggestions'));
+                searchSelection.switchSelector((localStorage.getItem('incog||search') || 'google'));
+                searchSuggestionSelection.switchSelector((localStorage.getItem('incog||suggestions') || 'ddg'));
             }
         },
         id: 'search'
@@ -622,17 +622,10 @@ async function createAbout(app) {
     ]
 };
 
-async function tabURL(parsedURL) {
-    // Totally not a mess of code from Tsunami 2.0 and HolyUB modified to work with Incognito
-    var res = await fetch(__uv$config.bare + 'v1/', {headers: {
-            'x-bare-host': parsedURL.hostname,
-            'x-bare-protocol': parsedURL.protocol,
-            'x-bare-path': (function() {if(parsedURL.pathname.endsWith('/') || parsedURL.pathname.endsWith('')) return parsedURL.pathname; else return '/'})(),
-            'x-bare-port': (function() {if(parsedURL.protocol == 'https:') return 443; else return 80})(),
-            'x-bare-headers': JSON.stringify({ Host: parsedURL.hostname }),
-            'x-bare-forward-headers': '[]'
-        }
-    })
+async function tabURL(url) {
+    // A mess of code from Tsunami 2.0 and HolyUB modified to work with Incognito
+    const res = await app.bare.fetch(url);
+    const parsedURL = new URL(res.finalURL);
     var dom = new DOMParser().parseFromString(await res.text(), "text/html");
     var title = parsedURL.href;
     if(dom.getElementsByTagName("title")[0]) title = dom.getElementsByTagName("title")[0].innerText;

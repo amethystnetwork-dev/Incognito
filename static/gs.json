@@ -129,7 +129,7 @@
   },
   {
     "img": "./img/gs/fnf.jpg",
-    "location": "./source/fnf/",
+    "location": "./source/fridaynightfunkin/",
     "category": "web",
     "title": "Friday Night Funkin"
   },
@@ -227,6 +227,12 @@
     "img": "./img/gs/vex5.jpg",
     "location": "./source/vex5/",
     "title": "Vex 5",
+    "category": "web"
+  },
+  {
+    "img": "./img/gs/vex6.jpg",
+    "location": "./source/vex6/",
+    "title": "Vex 6",
     "category": "web"
   },
   {

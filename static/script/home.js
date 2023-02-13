@@ -79,35 +79,24 @@ function access(app) {
 
             clearTimeout(app.timeout);
             app.timeout = setTimeout(async () => {
+                const { bare } = app;
                 var mode = localStorage.getItem('incog||suggestions') || 'ddg';
-                var path;
                 var host;
                 var prefix;
                 var array;
                 if(mode == 'none') {} else {
                     switch(mode) {
                         case 'ddg':
-                            host = 'duckduckgo.com'
-                            path = '/ac/?q='
+                            host = 'https://duckduckgo.com/ac/?q='
                             prefix = 'phrase'
                             array = false
                             break;
                         case 'brave':
-                            host = 'search.brave.com'
-                            path = '/api/suggest?q='
+                            host = 'https://search.brave.com/api/suggest?q='
                             array = true
                             break;
                     }
-                    const res = await fetch(__uv$config.bare + 'v1/', {
-                        headers: {
-                            'x-bare-host': host,
-                            'x-bare-protocol': 'https:',
-                            'x-bare-path': path + encodeURIComponent(event.target.value),
-                            'x-bare-port': '443',
-                            'x-bare-headers': JSON.stringify({ Host: host }),
-                            'x-bare-forward-headers': '[]'
-                        }
-                    })
+                    const res = await bare.fetch(host + encodeURIComponent(event.target.value))
                     const json = await res.json();
                     var suggestions = [];
 

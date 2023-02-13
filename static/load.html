@@ -90,9 +90,6 @@
                 let url = atob(decodeURIComponent(window.location.hash.slice(1)));
                 let search;
                 switch (localStorage.getItem('incog||search')) {
-                    case 'google':
-                        search = 'https://google.com/search?q='
-                        break;
                     case 'ddg':
                         search = 'https://duckduckgo.com/?q='
                         break;
@@ -104,7 +101,10 @@
                         break;
                     default:
                         localStorage.setItem('incog||search', 'google')
+                        // fall through to next option
+                    case 'google':
                         search = 'https://google.com/search?q='
+                    break;
                 };
                 if (url) {
                     if (!isUrl(url)) url = search + url;
