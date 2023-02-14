@@ -34,7 +34,8 @@
     "@iconify/icons-fluent": "^1.2.18",
     "@tomphttp/bare-server-node": "^1.2.2",
     "nodemon": "^2.0.20",
-    "serve-static": "^1.15.0"
+    "serve-static": "^1.15.0",
+    "mocha": "^10.2.0"
   },
   "engines": {
     "npm": ">=8.0.0",
