@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon src/index.js",
     "install-webretro-linux": "chmod u+x ./src/webretro.sh && ./src/webretro.sh",
-    "install-webretro-win": "echo \"Error: not finshed\" && exit 1"
+    "install-webretro-win": "echo \"Error: not finshed\" && exit 1",
+    "test": "mocha"
   },
   "files": [
     "static",
