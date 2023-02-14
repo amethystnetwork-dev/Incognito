@@ -26,6 +26,6 @@ jobs:
       with:
         node-version: 18
         cache: 'npm'
-    - run: npm install
+    - run: npm init && npm install
     - run: npm run build --if-present
     - run: npm test
