@@ -83,7 +83,3 @@ Ultraviolet has some known limitations such as downloading files can be buggy an
 **My question is not answered**
 
 Because we can't answer every question here, you may want to check the [docs](https://amethystnetwork-dev.github.io/docs/category/incognito). If you still have questions, you might want to join our Discord [#discord-server (link)](#discord-server)
-
-## Credits
-
-[Caracal.js](https://github.com/caracal-js) - Creator of Incognito
