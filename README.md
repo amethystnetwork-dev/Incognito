@@ -1,6 +1,6 @@
 # NOTICE:
 
-You CANNOT deploy to Vercel, Netifly, GitHub Pages, or Cloudflare pages. [Read more here](https://amethystnetwork-dev.github.io/docs/static-hosts).
+You CANNOT deploy to Netifly, GitHub Pages, or Cloudflare pages. [Read more here](https://amethystnetwork-dev.github.io/docs/static-hosts).
 
 <!--
                                 _     _                     _       _   _          _                               _    
@@ -39,6 +39,11 @@ You CANNOT deploy to Vercel, Netifly, GitHub Pages, or Cloudflare pages. [Read m
     <a href="https://amethystnetwork-dev.github.io/docs/projects/incognito/manual-deployment/#terminal-with-deno"><img src="https://img.shields.io/badge/deno%20js-000000?style=for-the-badge&logo=deno&logoColor=white" alt="Deno JS"></img></a>
     <a href="https://amethystnetwork-dev.github.io/docs/projects/incognito/manual-deployment/#terminal-with-nodejs"><img src="https://img.shields.io/badge/terminal-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Terminal"></img></a>
     <a href="https://amethystnetwork-dev.github.io/docs/projects/incognito/manual-deployment/#docker-with-nodejs"><img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"></img></a>
+    <br>
+    <br>
+    <a href="https://alienhub.xyz/?utm_medium=amethystnetwork">
+      <img src="https://alienhub.xyz/alien1.gif" width="450" height="150"></img>
+    </a>
 </div>
 
 ## Discord Server
@@ -51,7 +56,6 @@ Press the join button to join the server:
 
 - [Features](#features)
 - [FAQ](#faq)
-- [More](#more)
 - [Credits](#credits)
 
 
@@ -69,6 +73,10 @@ Press the join button to join the server:
 You should join the official Titanium Network Discord for official links
 
 [![Titanium Network Discord](https://invidget.switchblade.xyz/unblock?theme=light)](https://discord.gg/unblock)
+
+**X website is not working?**
+
+Proxies can have issues, like websites not working, websites blocking the proxy or data being locked to that website. [AlienHub](https://alienhub.xyz/?utm_medium=amethystnetwork) fixes these issues and more!
 
 **Who is this repo for?**
 
