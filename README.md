@@ -41,7 +41,7 @@ You CANNOT deploy to Netifly, GitHub Pages, or Cloudflare pages. [Read more here
     <a href="https://amethystnetwork-dev.github.io/docs/projects/incognito/manual-deployment/#docker-with-nodejs"><img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"></img></a>
     <br>
     <br>
-    <a href="https://alienhub.xyz/?utm_medium=amethystnetwork">
+    <a href="https://alienhub.xyz/?utm_source=incog_gh&utm_medium=amethystnetwork">
       <img src="https://alienhub.xyz/alien1.gif" width="450" height="150"></img>
     </a>
 </div>
@@ -50,7 +50,7 @@ You CANNOT deploy to Netifly, GitHub Pages, or Cloudflare pages. [Read more here
 
 Press the join button to join the server:
 
-[![Join us on Discord](https://invidget.switchblade.xyz/J3VPy5Vy8x?theme=light)](https://discord.gg/J3VPy5Vy8x)
+[![Join us on Discord](https://invidget.switchblade.xyz/fzrmxgu2NR?theme=light)](https://discord.gg/fzrmxgu2NR)
 
 ## Overview
 

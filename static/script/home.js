@@ -22,10 +22,20 @@ const tips = [
     'Access popular media & sites easily in <a href="#apps">apps.</a>',
     'This <a href="https://github.com/amethystnetwork-dev/Incognito">unofficial In&#173;cog&#173;nito version</a> is made by Am&#173;et&#173;hy&#173;st Net&#173;wo&#173;rk.',
     'Join the <a href="#community">Am&#173;et&#173;hyst Ne&#173;tw&#173;ork d&#173;i&#173;sco&#173;rd</a>',
-    'Get answers to questions in <a href="#support">support</a>'
+    'Get answers to questions in <a href="#support">support</a>',
+    `Check out <a onclick="(${ah.toString()})()">Ali&#173;enHu&#173;b</a>`
 ];
 
+function ah() {
+    app.main.target.style.display = 'none';
+    app.header.target.style.display = 'none';
 
+    const frame = document.querySelector('.access-frame');
+    frame.src = './load.html#aHR0cHM6Ly9hbGllbmh1Yi54eXovP3V0bV9zb3VyY2U9aW5jb2dfZGVwbG95JnV0bV9tZWRpdW09YW1ldGh5c3RuZXR3b3Jr';
+
+    frame.style.display = 'block';
+    document.querySelector('.access-panel').style.removeProperty('display');
+}
 
 function access(app) {
     if (document.querySelector('header').hasAttribute('data-init')) {

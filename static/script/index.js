@@ -207,7 +207,7 @@ document.querySelector('.access-panel').addEventListener('mouseenter', async eve
             document.querySelector('.access-panel .controls .icon').src = url;
             URL.revokeObjectURL(url);
         } else {
-            const res = await bare.fetch(win.__uv.rewriteUrl('/favicon.ico'));
+            const res = await bare.fetch(new URL('/favicon.ico', win.__uv$location.origin));
 
             const blob = await res.blob();
             const url = URL.createObjectURL(blob);
