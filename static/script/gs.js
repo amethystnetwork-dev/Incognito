@@ -111,6 +111,7 @@ async function compileGs(app) {
         n64: [],
     };
 
+    app.search.input.placeholder = `Search library (${json.length})`
     for (const entry of json) {
         const elem = app.createElement('div', [], {
             class: 'gs-entry',

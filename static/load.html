@@ -86,7 +86,8 @@
     </div>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./uv.sw-handler.js', { scope: __uv$config.prefix }).then(() => {
+            navigator.serviceWorker.getRegistration("./uv.sw-handler.js").then(async worker => {
+                if(!worker) await navigator.serviceWorker.register('./uv.sw-handler.js', { scope: __uv$config.prefix });
                 let url = atob(decodeURIComponent(window.location.hash.slice(1)));
                 let search;
                 switch (localStorage.getItem('incog||search')) {
@@ -114,7 +115,11 @@
             });
         } else {
             document.querySelector('.lds-dual-ring').remove();
-            document.querySelector('.info').textContent = 'Your browser does not support service workers or is blocking them (private browsing mode?). Try swapping or updating your browser.'
+            if(window.location.protocol == 'http:') {
+                document.querySelector('.info').textContent = 'You are using http:// and your browser seems to be blocking service workers because of that. Try using https://.'
+            } else {
+                document.querySelector('.info').textContent = `Your browser does not support service workers or is blocking them (private browsing mode?). Try swapping or updating your browser.`
+            }
         };
 
         function isUrl(val = '') {
