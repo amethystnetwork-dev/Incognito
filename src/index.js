@@ -8,30 +8,33 @@ import { readFileSync, existsSync } from "node:fs";
 import { hostname } from "node:os";
 
 import serveStatic from "serve-static";
+import serveIndex from "serve-index";
 import connect from "connect";
+import analytics from "./analytics.js";
 
 // The following message MAY NOT be removed
 console.log("Incognito\nThis program comes with ABSOLUTELY NO WARRANTY.\nThis is free software, and you are welcome to redistribute it\nunder the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nYou should have received a copy of the GNU General Public License\nalong with this program. If not, see <https://www.gnu.org/licenses/>.\n");
 
 const app = connect();
 const bare = createBareServer("/bare/");
-var server, PORT = process.env.PORT;
 const ssl = existsSync("../ssl/key.pem") && existsSync("../ssl/cert.pem");
-if(ssl) {
-  server = createHttpsServer({
-    key: readFileSync("../ssl/key.pem"),
-    cert: readFileSync("../ssl/cert.pem")
-  });
-  PORT = (PORT || 443);
-} else { server = createHttpServer(); PORT = (PORT || 8080);}
+const PORT = process.env.PORT || ssl ? 443 : 8080;
+const server = ssl ? createHttpsServer({
+  key: readFileSync("../ssl/key.pem"),
+  cert: readFileSync("../ssl/cert.pem")
+}) : createHttpServer();
 
 app.use((req, res, next) => {
   if(bare.shouldRoute(req)) bare.routeRequest(req, res); else next();
 });
 
 app.use(serveStatic(fileURLToPath(new URL("../static/", import.meta.url))));
+const gFolder = fileURLToPath(new URL("../gsource", import.meta.url));
+app.use("/source", serveStatic(gFolder));
+app.use("/source", serveIndex(gFolder, { icons: true }));
 
-app.use("/uv", serveStatic(uvPath));
+app.use("/uv/", serveStatic(uvPath));
+analytics(app);
 
 app.use((req, res) => {
   res.writeHead(500, null, {

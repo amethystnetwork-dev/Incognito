@@ -48,12 +48,13 @@ async function options(app) {
         { id: 'google', content: 'Google' },
         { id: 'ddg', content: 'DuckDuckGo' },
         { id: 'bing', content: 'Bing' },
-        { id: 'brave', content: 'Brave' }
+        { id: 'brave', content: 'Brave' },
+        { id: 'startpage', content: 'Startpage' }
     ]
 
     const searchEngineSuggestions = [
-        { id: 'ddg', content: 'DuckDuckGo' },
-        { id: 'brave', content: 'Brave' },
+        ...searchEngines,
+        { id: 'ecosia', content: 'Ecosia' },
         { id: 'none', content: 'None' }
     ]
 
@@ -352,8 +353,8 @@ The about:blank script is based off of ABC by
 */
                         try {
                             var page = window.open()
-                            page.document.body.innerHTML = `<iframe style="height:100%; width: 100%; border: none; position: fixed; top: 0; right: 0; left: 0; bottom: 0; border: none" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation allow-top-navigation-by-user-activation" src="` + window.location.href + `"></iframe>`
-                        } catch {}
+                            page.document.body.innerHTML = `<iframe style="height:100%; width: 100%; border: none; position: fixed; top: 0; right: 0; left: 0; bottom: 0; border: none" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation allow-top-navigation-by-user-activation" src="${window.location.href}"></iframe>`
+                        } catch {return}
                         window.location.replace((localStorage.getItem('incog||ab') || 'https://google.com'))
                         }
                     }

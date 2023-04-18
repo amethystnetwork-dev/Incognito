@@ -1,33 +1,84 @@
-import crypto from 'node:crypto'
+import crypto from 'node:crypto';
+import bodyParser from "body-parser";
+import { METHODS } from 'node:http';
 
-export default function(req, res, data) {
-    switch(req.url) {
-        case '/data/visit':
-            data.live++
-            data.visits++
-            if(data.peak < data.live) data.peak = data.live
-            res.end('OK')
-            break;
-        case '/data/create-id':
-            res.end(crypto.randomUUID())
-            break;
-        case '/data/keep-alive':
-            res.end()
-            break;
-        case '/data/destroy':
-            removeVisit(req, data)
-            res.end()
-        break;
-        case '/data/data':
-            res.writeHead(200, { 'Content-Type': 'application/json' })
-            res.end(JSON.stringify(data))
-            break;
-        default:
-            res.writeHead(404)
-            res.end('404')
+function mnt(app, method, path, handler) {
+    app.use(path, (req, res, next) => {
+        if(!req.method === method.toUpperCase()) return next();
+        if(req.url.endsWith("/") && !path.endsWith("/")) req.url = req.url.slice(0, req.url.length - 1);
+        if(req.url !== path) return next();
+        try {
+            handler(req, res, next);
+        } catch(err) {
+            next(err);
+        }
+    });
+};
+
+const visitors = new Map();
+let visits = 0;
+let peak = 0;
+
+export default function(app) {
+    for(const method of METHODS) {
+        app[method] = (path, handler) => mnt(app, method, path, handler);
+    };
+    app.use("/data", bodyParser.text());
+
+    app.GET("/data/data", (req, res) => {
+        res.writeHead(200, { 'Content-Type': 'application/json' })
+        res.end(JSON.stringify({
+            live: visitors.size,
+            peak,
+            visits
+        }));
+    });
+
+    app.GET("/data/debug", (req, res) => {
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify([...visitors]));
+    });
+
+    app.GET("/data/create-id", (req, res) => {
+        const id = crypto.randomUUID();
+        visitors.set(id, {
+            ut: Date.now(),
+            creation: Date.now()
+        });
+        res.end(id);
+    });
+
+    app.POST("/data/visit", (req, res) => {
+        visits++;
+        res.end("OK");
+    });
+
+    app.POST("/data/check-id", (req, res) => {
+        res.end(visitors.has(req.body).toString());
+    });
+
+    app.POST("/data/keep-alive", (req, res) => {
+        if(!visitors.has(req.body)) return res.end("Invalid ID");
+        if(peak < visitors.size) peak = visitors.size;
+        visitors.set(req.body, {
+            ut: Date.now(),
+            ...visitors.get(req.body)
+        });
+        res.end("OK");
+    });
+
+    app.POST("/data/destroy", (req, res) => {
+        if(!visitors.has(req.body)) return res.end("Invalid ID");
+        visitors.delete(req.body);
+        res.end("Deleted");
+    });
+};
+
+setInterval(() => {
+    const now = Date.now();
+    for(const [uuid, data] of [...visitors]) {
+        if(now - data.ut > 60000) {
+            visitors.delete(uuid);
+        }
     }
-}
-
-function removeVisit(req, data) {
-    data.live = data.live - 1
-}
+}, 60000);

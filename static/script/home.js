@@ -89,48 +89,29 @@ function access(app) {
 
             clearTimeout(app.timeout);
             app.timeout = setTimeout(async () => {
-                const { bare } = app;
                 var mode = localStorage.getItem('incog||suggestions') || 'ddg';
-                var host;
-                var prefix;
-                var array;
-                if(mode == 'none') {} else {
-                    switch(mode) {
-                        case 'ddg':
-                            host = 'https://duckduckgo.com/ac/?q='
-                            prefix = 'phrase'
-                            array = false
-                            break;
-                        case 'brave':
-                            host = 'https://search.brave.com/api/suggest?q='
-                            array = true
-                            break;
-                    }
-                    const res = await bare.fetch(host + encodeURIComponent(event.target.value))
-                    const json = await res.json();
-                    var suggestions = [];
+                if(mode == 'none') return;
+                const provider = app.searchProviders[mode];
+                const res = await app.bare.fetch(provider.mapQuery(event.target.value));
+                const text = await res.text();
+                const suggestions = provider.parseResponse(text);
 
-                    if(array) { suggestions = json[1] } else {
-                        json.forEach(element => suggestions.push(element[prefix]));
-                    }
-
-                    suggestions.forEach(element => {
-                        app.main.suggestions.append(app.createElement('div', element, { class: 'suggestion',
-                                events: {
-                                    click() {
-                                        app.search.input.value = element;
-                                        const frame = document.querySelector('iframe');
-                                        document.querySelector('main').style.display = 'none';
-                                        document.querySelector('header').style.display = 'none';
-                                        frame.style.display = 'block';
-                                        frame.src = './load.html#' + encodeURIComponent(btoa(element));
-                                        document.querySelector('.access-panel').style.removeProperty('display');
-                                    }
+                suggestions.forEach(element => {
+                    app.main.suggestions.append(app.createElement('div', element, { class: 'suggestion',
+                            events: {
+                                click() {
+                                    app.search.input.value = element;
+                                    const frame = document.querySelector('iframe');
+                                    document.querySelector('main').style.display = 'none';
+                                    document.querySelector('header').style.display = 'none';
+                                    frame.style.display = 'block';
+                                    frame.src = './load.html#' + encodeURIComponent(btoa(element));
+                                    document.querySelector('.access-panel').style.removeProperty('display');
                                 }
-                            }))
+                            }
+                        }))
 
                     });
-            }
             }, 400);
 
         }).toString() + ')()'

@@ -85,28 +85,18 @@
         </p>
     </div>
     <script>
+        const engines = {
+            google: 'https://google.com/search?q=',
+            ddg: 'https://duckduckgo.com/?q=',
+            bing: 'https://bing.com/search?q=',
+            brave: 'https://search.brave.com/search?q=',
+            startpage: 'https://www.startpage.com/sp/search?query='
+        };
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.getRegistration("./uv.sw-handler.js").then(async worker => {
                 if(!worker) await navigator.serviceWorker.register('./uv.sw-handler.js', { scope: __uv$config.prefix });
                 let url = atob(decodeURIComponent(window.location.hash.slice(1)));
-                let search;
-                switch (localStorage.getItem('incog||search')) {
-                    case 'ddg':
-                        search = 'https://duckduckgo.com/?q='
-                        break;
-                    case 'bing':
-                        search = 'https://bing.com/search?q='
-                        break;
-                    case 'brave':
-                        search = 'https://search.brave.com/search?q='
-                        break;
-                    default:
-                        localStorage.setItem('incog||search', 'google')
-                        // fall through to next option
-                    case 'google':
-                        search = 'https://google.com/search?q='
-                    break;
-                };
+                let search = engines[localStorage.getItem('incog||search') || 'google'];
                 if (url) {
                     if (!isUrl(url)) url = search + url;
                     else if (!(url.startsWith('https://') || url.startsWith('http://'))) { url = 'http://' + url; };

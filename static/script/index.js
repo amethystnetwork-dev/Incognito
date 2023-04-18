@@ -28,6 +28,34 @@ window.app = new App();
 
 app.bare = new Ultraviolet.BareClient(new URL(__uv$config.bare, window.location));
 
+// You can add more search engines if you want
+app.searchProviders = {
+    google: {
+        mapQuery: (query) => `http://google.com/complete/search?q=${query}&client=${(["Chrome", "Firefox", "Safari"].filter(c => navigator.userAgent.includes(c))[0] || "Chrome").toLowerCase()}`,
+        parseResponse: (res) => JSON.parse(res)[1]
+    },
+    ddg: {
+        mapQuery: (query) => `https://duckduckgo.com/ac/?q=${encodeURIComponent(query)}`,
+        parseResponse: (res) => JSON.parse(res).map(ac => ac.phrase)
+    },
+    bing: {
+        mapQuery: (query) => `https://www.bing.com/AS/Suggestions?qry=${encodeURIComponent(query)}&cvid=%01&bareServer=`,
+        parseResponse: (res) => ([...res.matchAll(/<span class="sa_tm_text">(.*?)<\/span>/g)]).map(phrase => phrase[1].replace(/<strong>|<\/strong>/g, ''))
+    },
+    brave: {
+        mapQuery: (query) => `https://search.brave.com/api/suggest?q=${encodeURIComponent(query)}`,
+        parseResponse: (res) => JSON.parse(res)[1]
+    },
+    startpage: {
+        mapQuery: (query) => `https://www.startpage.com/suggestions?q=${encodeURIComponent(query)}&segment=omnibox`,
+        parseResponse: (res) => JSON.parse(res).suggestions.map(ac => ac.text)
+    },
+    ecosia: {
+        mapQuery: (query) => `https://ac.ecosia.org/?q=${encodeURIComponent(query)}`,
+        parseResponse: (res) => JSON.parse(res).suggestions
+    }
+};
+
 switch(localStorage.getItem('incog||background')) {
     case 'stars':
         particlesJS.load('.particles', './json/stars.json');

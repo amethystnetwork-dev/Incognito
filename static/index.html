@@ -30,22 +30,26 @@
             // Incognito analytics
             // Only tracks user visits!
             // Remove when needed.
-            /*
             navigator.sendBeacon('./data/visit');
             (async() => {
                 const res = await fetch('./data/create-id');
-                const id = await res.text();
+                let id = await res.text();
     
                 setInterval(() => {
                     navigator.sendBeacon('./data/keep-alive', id);
                 }, 15000)
+
+                setInterval(async () => {
+                    const res = await fetch('./data/check-id', { method: 'POST', body: id });
+                    const text = await res.text();
+                    if(text == 'false') id = await (await fetch('./data/create-id')).text();
+                }, 12000)
     
                 window.addEventListener('beforeunload', () => {
                     navigator.sendBeacon('./data/destroy', id);
                 });
     
             })();
-            */
         </script>
     </head>
     <body>
