@@ -16,7 +16,10 @@
                                                __/ |                                                                    
                                               |___/                                                                     
 */
-import { App } from './app.js'
+
+if(['netlify.app', 'vercel.app', 'github.io', 'gitlab.io', 'pages.dev'].includes(window.location.hostname)) throw alert(`You cannot deploy to ${window.location.hostname}. Did you read the notice before deploying?`);
+
+import { App } from './app.js';
 import { gs } from './gs.js';
 import { apps } from './apps.js';
 import { access } from './home.js';
