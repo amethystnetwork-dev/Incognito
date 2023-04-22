@@ -1,0 +1,22 @@
+name: This is a fork
+description: Or I am a skid
+body:
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Check these boxes to make sure you did everything right!
+      description: Just click on the box to check it off!
+      options:
+        - label: This repo is a fork of amethystnetwork-dev/Incognito
+          required: true
+        - label: I have joined the Amethyst Network Discord
+          required: true
+        - label: I just checked all of these boxes without reading the labels
+          required: false
+  - type: textarea
+    id: comment
+    attributes:
+      label: Comment
+      placeholder: Leave a comment
+    validations:
+      required: true
