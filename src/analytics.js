@@ -2,16 +2,23 @@ import crypto from 'node:crypto';
 import bodyParser from "body-parser";
 import { METHODS } from 'node:http';
 
+function shouldRoute(req, path) {
+    return req.originalUrl.endsWith("/") && !path.endsWith("/")
+        ? req.originalUrl.slice(0, req.originalUrl.length - 1)
+        : req.originalUrl
+    === path;
+}
+
 function mnt(app, method, path, handler) {
     app.use(path, (req, res, next) => {
         if(!req.method === method.toUpperCase()) return next();
-        if(req.url.endsWith("/") && !path.endsWith("/")) req.url = req.url.slice(0, req.url.length - 1);
-        if(req.url !== path) return next();
-        try {
-            handler(req, res, next);
-        } catch(err) {
-            next(err);
-        }
+        if(shouldRoute(req, path)) {
+            try {
+                handler(req, res, next);
+            } catch(err) {
+                next(err);
+            }
+        } else next();
     });
 };
 
