@@ -50,7 +50,7 @@ You CANNOT deploy to Netifly, GitHub Pages, or Cloudflare pages. [Read more here
 
 Press the join button to join the server:
 
-[![Join us on Discord](https://invidget.switchblade.xyz/fzrmxgu2NR?theme=light)](https://discord.gg/fzrmxgu2NR)
+[![Join us on Discord](https://invidget.switchblade.xyz/KA2bKyyaYS?theme=light)](https://discord.gg/KA2bKyyaYS)
 
 ## Overview
 
