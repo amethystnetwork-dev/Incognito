@@ -15,7 +15,7 @@ You CANNOT deploy to Netifly, GitHub Pages, or Cloudflare pages. [Read more here
 <!-- The font is called Big, if you are wondering -->
 <div align="center">
          
-<img src="https://socialify.git.ci/amethystnetwork-dev/Incognito/image?description=1&descriptionEditable=Access%20the%20world%20wide%20web&font=Inter&forks=1&issues=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2Famethystnetwork-dev%2FIncognito%2Fmain%2Fstatic%2Findex.svg&name=1&owner=1&pattern=Solid&stargazers=1&theme=Light" alt="Incognito" width="640" height="320" />
+<img src="https://socialify.git.ci/amethystnetwork-dev/Incognito/image?description=1&descriptionEditable=Access%20the%20world%20wide%20web&font=Inter&forks=1&issues=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2Famethystnetwork-dev%2FIncognito%2Fmain%2Fstatic%2Findex.svg&name=1&owner=1&pattern=Solid&stargazers=1&theme=Auto" alt="Incognito" width="640" height="320" />
 
 <a href="" alt="Made with NodeJS"><img src="https://img.shields.io/badge/Made%20with-Node.JS-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"></a> 
 <a href="https://github.com/amethystnetwork-dev/Incognito/graphs/contributors/" alt=""><img src="https://img.shields.io/github/contributors/amethystnetwork-dev/Incognito?style=for-the-badge"></a>
@@ -50,7 +50,7 @@ You CANNOT deploy to Netifly, GitHub Pages, or Cloudflare pages. [Read more here
 
 Press the join button to join the server:
 
-[![Join us on Discord](https://invidget.switchblade.xyz/KA2bKyyaYS?theme=light)](https://discord.gg/KA2bKyyaYS)
+[![Join us on Discord](https://invidget.switchblade.xyz/985982201302769765?theme=light)](https://amethystnetwork-dev.github.io/discord/invite)
 
 ## Overview
 
