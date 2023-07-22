@@ -23,13 +23,8 @@ async function support(app) {
     app.main.support = app.createElement(
         'div', 
         await getData(app));
-        app.search.back.style.display = 'inline';
-    app.search.back.setAttribute(
-        'onclick',
-        '(' + (function(){
-            window.location.hash = '';
-        }).toString() + ')();'
-    )
+    app.search.back.style.display = 'inline';
+	app.search.back.href = '#';
 };
 
 async function getData(app) {

@@ -86,11 +86,11 @@
     </div>
     <script>
         const engines = {
-            google: 'https://google.com/search?q=',
-            ddg: 'https://duckduckgo.com/?q=',
-            bing: 'https://bing.com/search?q=',
-            brave: 'https://search.brave.com/search?q=',
-            startpage: 'https://www.startpage.com/sp/search?query='
+            google: 'https://google.com/search?q=%s',
+            ddg: 'https://duckduckgo.com/?q=%s',
+            bing: 'https://bing.com/search?q=%s',
+            brave: 'https://search.brave.com/search?q=%s',
+            startpage: 'https://www.startpage.com/sp/search?query=%s'
         };
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.getRegistration("./uv.sw-handler.js").then(async worker => {
@@ -98,7 +98,8 @@
                 let url = atob(decodeURIComponent(window.location.hash.slice(1)));
                 let search = engines[localStorage.getItem('incog||search') || 'google'];
                 if (url) {
-                    if (!isUrl(url)) url = search + url;
+					console.log(search, url);
+                    if (!isUrl(url)) url = search.replace('%s', url);
                     else if (!(url.startsWith('https://') || url.startsWith('http://'))) { url = 'http://' + url; };
                 } else { url = new URL(search).origin }
                 window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
@@ -113,9 +114,16 @@
         };
 
         function isUrl(val = '') {
-            if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
-            return false;
+            return (/^http(s?):\/\//.test(val) || isSubdomain(val)) ? true : false;
         }
+
+		function isSubdomain(val) {
+			try {
+				const url = new URL(`http://${input}`);
+    			if (url.hostname.includes(".")) return true;
+			} catch {}
+			return false;
+		}
     </script>
 </body>
 </html>

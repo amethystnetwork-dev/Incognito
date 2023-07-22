@@ -26,6 +26,34 @@ const tips = [
     `Check out <a onclick="(${ah.toString()})()">Ali&#173;enHu&#173;b</a>`
 ];
 
+// You can add more search engines if you want
+const searchProviders = {
+    google: {
+        mapQuery: (query) => `http://google.com/complete/search?q=${query}&client=${(["Chrome", "Firefox", "Safari"].filter(c => navigator.userAgent.includes(c))[0] || "Chrome").toLowerCase()}`,
+        parseResponse: (res) => JSON.parse(res)[1]
+    },
+    ddg: {
+        mapQuery: (query) => `https://duckduckgo.com/ac/?q=${encodeURIComponent(query)}`,
+        parseResponse: (res) => JSON.parse(res).map(ac => ac.phrase)
+    },
+    bing: {
+        mapQuery: (query) => `https://www.bing.com/AS/Suggestions?qry=${encodeURIComponent(query)}&cvid=%01&bareServer=`,
+        parseResponse: (res) => ([...res.matchAll(/<span class="sa_tm_text">(.*?)<\/span>/g)]).map(phrase => phrase[1].replace(/<strong>|<\/strong>/g, ''))
+    },
+    brave: {
+        mapQuery: (query) => `https://search.brave.com/api/suggest?q=${encodeURIComponent(query)}`,
+        parseResponse: (res) => JSON.parse(res)[1]
+    },
+    startpage: {
+        mapQuery: (query) => `https://www.startpage.com/suggestions?q=${encodeURIComponent(query)}&segment=omnibox`,
+        parseResponse: (res) => JSON.parse(res).suggestions.map(ac => ac.text)
+    },
+    ecosia: {
+        mapQuery: (query) => `https://ac.ecosia.org/?q=${encodeURIComponent(query)}`,
+        parseResponse: (res) => JSON.parse(res).suggestions
+    }
+};
+
 function ah() {
     app.main.target.style.display = 'none';
     app.header.target.style.display = 'none';
@@ -62,60 +90,61 @@ function access(app) {
     app.nav.settings = app.createLink('#settings', '<i class="fas fa-sliders-h secondary"></i>', {
         id: 'apps'
     })
-    if(localStorage.getItem('incog||disabletips') !== 'none') app.main.tip = app.createElement('div', tips[Math.floor(Math.random()*tips.length)], { class: 'tip' });
+    app.main.tip = app.createElement('div', (localStorage.getItem('incog||disabletips') !== 'none' ? tips[Math.floor(Math.random()*tips.length)] : ''), { class: 'tip' });
 
-    app.main.suggestions = app.createElement('div', [], {
-        class: 'suggestions',
-        style: {
-            display: 'block'
-        } 
-    });
+	async function searchSuggestions(event) {
+		app.main.suggestions.innerHTML = '';
+		if (!event.target.value) {
+			app.nav.target.style.removeProperty('display');
+			app.header.target.setAttribute('data-page', '');
+			app.main.tip.style.removeProperty('display');
+			app.search.logo.style.display = 'inline';
+			return;
+		}
 
-    app.search.input.setAttribute(
-        'oninput',
-        '(' + (async function() {
-            app.main.suggestions.innerHTML = '';
-            if (!event.target.value) {
-                app.nav.target.style.removeProperty('display');
-                app.header.target.setAttribute('data-page', '');
-		app.main.tip.style.removeProperty('display');
-                app.search.logo.style.display = 'inline';
-                return;
-            }
-	    app.main.tip.style.display = 'none';
-            app.header.target.removeAttribute('data-page');
-            app.nav.target.style.display = 'none';
-            app.search.logo.style.display = 'none';
+		app.main.tip.style.display = 'none';
+		app.header.target.removeAttribute('data-page');
+		app.nav.target.style.display = 'none';
+		app.search.logo.style.display = 'none';
 
-            clearTimeout(app.timeout);
-            app.timeout = setTimeout(async () => {
-                var mode = localStorage.getItem('incog||suggestions') || 'ddg';
-                if(mode == 'none') return;
-                const provider = app.searchProviders[mode];
-                const res = await app.bare.fetch(provider.mapQuery(event.target.value));
-                const text = await res.text();
-                const suggestions = provider.parseResponse(text);
+		clearTimeout(app.timeout);
+		app.timeout = setTimeout(async () => {
+			const provider = searchProviders[localStorage.getItem('incog||suggestions') || 'ddg'];
+			const res = await app.bare.fetch(provider.mapQuery(event.target.value));
+			const text = await res.text();
+			const suggestions = provider.parseResponse(text);
 
-                suggestions.forEach(element => {
-                    app.main.suggestions.append(app.createElement('div', element, { class: 'suggestion',
-                            events: {
-                                click() {
-                                    app.search.input.value = element;
-                                    const frame = document.querySelector('iframe');
-                                    document.querySelector('main').style.display = 'none';
-                                    document.querySelector('header').style.display = 'none';
-                                    frame.style.display = 'block';
-                                    frame.src = './load.html#' + encodeURIComponent(btoa(element));
-                                    document.querySelector('.access-panel').style.removeProperty('display');
-                                }
-                            }
-                        }))
+			suggestions.forEach(element => {
+				app.main.suggestions.append(app.createElement('div', element, { class: 'suggestion',
+						events: {
+							click() {
+								app.search.input.value = element;
+								const frame = document.querySelector('iframe');
+								document.querySelector('main').style.display = 'none';
+								document.querySelector('header').style.display = 'none';
+								frame.style.display = 'block';
+								frame.src = './load.html#' + encodeURIComponent(btoa(element));
+								document.querySelector('.access-panel').style.removeProperty('display');
+							}
+						}
+					}))
 
-                    });
-            }, 400);
+				});
+		}, 400);
+	}
 
-        }).toString() + ')()'
-    );
+	if(localStorage.getItem('incog||suggestions') !== 'none') {
+    	app.main.suggestions = app.createElement('div', [], {
+        	class: 'suggestions',
+        	style: {
+            	display: 'block'
+        	} 
+    	});
+
+		app.search.input.addEventListener('input', searchSuggestions);
+		app.once('exit', () => app.search.input.removeEventListener('input', searchSuggestions));
+	}
+
     app.search.input.setAttribute('form', 'access-form');
     app.search.submit.setAttribute('form', 'access-form');
 

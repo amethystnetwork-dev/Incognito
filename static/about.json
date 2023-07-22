@@ -19,8 +19,12 @@
     ],
     "socials": [
         {
-            "name": "<a href=\"https://discord.gg/unblock\">TN Server</a>",
-            "data": "The official Ti&#173;tan&#173;ium Ne&#173;two&#173;rk disc&#173;ord server."
+            "name": "<a href=\"https://www.patreon.com/incognitotn\">TN Patreon</a>",
+            "data": "Helps TN restock its Incognito domains & upgrade servers"
+        },
+        {
+            "name": "<a href=\"https://discord.gg/unblock\">TN Discord</a>",
+            "data": "The official Titanium Network discord server."
         }
     ],
     "contact": [

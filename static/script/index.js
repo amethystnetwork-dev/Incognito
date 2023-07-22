@@ -31,7 +31,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.`);
 
-if(['netlify.app', 'vercel.app', 'github.io', 'gitlab.io', 'pages.dev'].includes(window.location.hostname)) throw alert(`You cannot deploy to ${window.location.hostname}. Did you read the notice before deploying?`);
+if(['netlify.app', 'vercel.app', 'github.io', 'gitlab.io', 'pages.dev'].filter(host => window.location.hostname.includes(host)).length) throw alert(`You cannot deploy to ${window.location.hostname}. Did you read the notice before deploying?`);
 
 import { App } from './app.js';
 import { gs } from './gs.js';
@@ -44,34 +44,6 @@ import { community } from './community.js';
 window.app = new App();
 
 app.bare = new Ultraviolet.BareClient(new URL(__uv$config.bare, window.location));
-
-// You can add more search engines if you want
-app.searchProviders = {
-    google: {
-        mapQuery: (query) => `http://google.com/complete/search?q=${query}&client=${(["Chrome", "Firefox", "Safari"].filter(c => navigator.userAgent.includes(c))[0] || "Chrome").toLowerCase()}`,
-        parseResponse: (res) => JSON.parse(res)[1]
-    },
-    ddg: {
-        mapQuery: (query) => `https://duckduckgo.com/ac/?q=${encodeURIComponent(query)}`,
-        parseResponse: (res) => JSON.parse(res).map(ac => ac.phrase)
-    },
-    bing: {
-        mapQuery: (query) => `https://www.bing.com/AS/Suggestions?qry=${encodeURIComponent(query)}&cvid=%01&bareServer=`,
-        parseResponse: (res) => ([...res.matchAll(/<span class="sa_tm_text">(.*?)<\/span>/g)]).map(phrase => phrase[1].replace(/<strong>|<\/strong>/g, ''))
-    },
-    brave: {
-        mapQuery: (query) => `https://search.brave.com/api/suggest?q=${encodeURIComponent(query)}`,
-        parseResponse: (res) => JSON.parse(res)[1]
-    },
-    startpage: {
-        mapQuery: (query) => `https://www.startpage.com/suggestions?q=${encodeURIComponent(query)}&segment=omnibox`,
-        parseResponse: (res) => JSON.parse(res).suggestions.map(ac => ac.text)
-    },
-    ecosia: {
-        mapQuery: (query) => `https://ac.ecosia.org/?q=${encodeURIComponent(query)}`,
-        parseResponse: (res) => JSON.parse(res).suggestions
-    }
-};
 
 switch(localStorage.getItem('incog||background')) {
     case 'stars':
@@ -160,8 +132,7 @@ app.on('exit', async () => {
 
     app.search.logo.style.display = 'none';
     app.search.submit.style.display = 'none';
-
-    app.search.input.removeAttribute('oninput');
+	
     app.search.title.textContent = '';
     app.search.title.style.display = 'none';
 

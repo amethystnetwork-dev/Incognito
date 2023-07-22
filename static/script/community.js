@@ -23,7 +23,6 @@ async function community(app) {
 
     const res = await app.bare.fetch("https://cdn.jsdelivr.net/gh/amethystnetwork-dev/.github/meta/discord.json");
     const json = await res.json();
-    const code = json.invite_code;
     app.main.support = app.createElement(
         'div', 
         [
@@ -44,12 +43,7 @@ async function community(app) {
             
         ]);
         app.search.back.style.display = 'inline';
-    app.search.back.setAttribute(
-        'onclick',
-        '(' + (function(){
-            window.location.hash = '';
-        }).toString() + ')();'
-    )
+		app.search.back.href = '#';
 };
 
 export { community };
