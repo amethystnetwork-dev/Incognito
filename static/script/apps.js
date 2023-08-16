@@ -61,7 +61,7 @@ async function apps(app) {
 
 
 async function compileGs(app) {
-    const res = await fetch('./apps.json');
+    const res = await fetch('./source/apps.json');
     const json = await res.json();
     const arr = [];
 

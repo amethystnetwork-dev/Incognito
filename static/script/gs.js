@@ -95,7 +95,7 @@ async function gs(app) {
 
 
 async function compileGs(app) {
-    const res = await fetch('./gs.json');
+    const res = await fetch('./source/gs.json');
     const json = await res.json();
 
     const list = {
@@ -163,9 +163,9 @@ async function compileGs(app) {
 
                     window.scrollTo({ top: 0 });
 
-					function exitGame() {
+					function exitGame(event) {
 						if (window.location.hash !== '#gs') return this.removeEventListener('click', exitGame);
-
+						
 						event.preventDefault();
 						
 						app.main.library.style.removeProperty('display');

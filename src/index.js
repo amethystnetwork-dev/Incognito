@@ -1,5 +1,6 @@
 import { createBareServer } from "@tomphttp/bare-server-node";
 import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
+import { gamesPath } from "@amethystnetwork-dev/incognito-gfiles";
 
 import { fileURLToPath } from "node:url";
 import { createServer as createHttpsServer } from "node:https";
@@ -29,9 +30,8 @@ app.use((req, res, next) => {
 });
 
 app.use(serveStatic(fileURLToPath(new URL("../static/", import.meta.url))));
-const gFolder = fileURLToPath(new URL("../gsource", import.meta.url));
-app.use("/source", serveStatic(gFolder));
-app.use("/source", serveIndex(gFolder, { icons: true }));
+app.use("/source", serveStatic(gamesPath));
+app.use("/source", serveIndex(gamesPath, { icons: true }));
 
 app.use("/uv/", serveStatic(uvPath));
 analytics(app);
