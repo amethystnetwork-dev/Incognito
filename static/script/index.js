@@ -239,7 +239,7 @@ app.on('#gs', gs);
 app.on('#apps', apps);
 app.on('#settings', options);
 app.on('#support', support);
-app.on('#community', community);
+//app.on('#community', community);
 
 app.init();
 
