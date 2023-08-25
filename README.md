@@ -1,6 +1,6 @@
 # NOTICE:
 
-You CANNOT deploy to Netifly, GitHub Pages, or Cloudflare pages. [Read more here](https://amethystnetwork-dev.github.io/docs/static-hosts).
+You CANNOT deploy to Vercel, Netifly, GitHub Pages, or Cloudflare pages. [Read more here](https://amethystnetwork-dev.github.io/docs/static-hosts).
 
 <!--
                                 _     _                     _       _   _          _                               _    
@@ -74,13 +74,17 @@ You should join the official Titanium Network Discord for official links
 
 [![Titanium Network Discord](https://invidget.switchblade.xyz/unblock?theme=light)](https://discord.gg/unblock)
 
+**Who is this repo for?**
+
+This repo is for people that want an easy way to deploy Incognito to cloud hosting services. If you just want to use Incognito and not deploy it, I recommend you get an official Incognito domain (Check above for how to do so)
+
+**Where are the game files?**
+
+They are located in [another repo](https://github.com/amethystnetwork-dev/Incognito-gfiles) because of the large file sizes.
+
 **X website is not working?**
 
 Proxies can have issues, like websites not working, websites blocking the proxy or data being locked to that website. [AlienHub](https://alienhub.xyz/?utm_medium=amethystnetwork) fixes these issues and more!
-
-**Who is this repo for?**
-
-This repo is for people that want an easy way to deploy Incognito to cloud hosting services like Railway. If you just want to use Incognito and not deploy it, I recommend you get an official Incognito domain (Check above for how to do so)
 
 **What proxies are used?**
 

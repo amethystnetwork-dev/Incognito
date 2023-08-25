@@ -30,7 +30,7 @@
   "author": "caracal-js and Amethyst Network contributors",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@amethystnetwork-dev/incognito-gfiles": "^1.0.0",
+    "@amethystnetwork-dev/incognito-gfiles": "https://github.com/amethystnetwork-dev/Incognito-gfiles/archive/ede130174c30fc6931b3e7ba842341d90f958f5e.tar.gz",
     "@titaniumnetwork-dev/ultraviolet": "^2.0.0",
     "@tomphttp/bare-server-node": "^2.0.1",
     "body-parser": "^1.20.2",

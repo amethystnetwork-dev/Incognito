@@ -8,7 +8,6 @@ COPY package*.json .
 RUN npm install
 
 COPY static static/
-COPY gsource gsource/
 COPY src/*.js src/
 
 EXPOSE 8080

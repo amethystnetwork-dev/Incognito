@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: To create a issue join the Amethyst Network discord
-    url: https://discord.gg/J3VPy5Vy8x
+    url: https://amethystnetwork-dev.github.io/discord/invite
     about: I do not want to have to deal with random useless issues on here.
   - name: Heroku, Repl.it, Blocked site issues
     url: https://www.youtube.com/embed/BLUkgRAy_Vo?mute=1&autoplay=1
@@ -9,3 +9,6 @@ contact_links:
   - name: Netifly, Vercel, GitHub Pages, not working
     url: https://www.youtube.com/embed/BLUkgRAy_Vo?mute=1&autoplay=1
     about: This cannot work on static hosts.
+  - name: Anything about the games
+    url: https://github.com/amethystnetwork-dev/Incognito-gfiles
+    about: They are in another repo now.

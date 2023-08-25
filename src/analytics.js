@@ -1,6 +1,6 @@
-import crypto from 'node:crypto';
+import crypto from "node:crypto";
 import bodyParser from "body-parser";
-import { METHODS } from 'node:http';
+import { METHODS } from "node:http";
 
 function shouldRoute(req, path) {
     return req.originalUrl.endsWith("/") && !path.endsWith("/")
@@ -33,7 +33,7 @@ export default function(app) {
     app.use("/data", bodyParser.text());
 
     app.GET("/data/data", (req, res) => {
-        res.writeHead(200, { 'Content-Type': 'application/json' })
+        res.writeHead(200, { "Content-Type": "application/json" })
         res.end(JSON.stringify({
             live: visitors.size,
             peak,
@@ -42,8 +42,8 @@ export default function(app) {
     });
 
     app.GET("/data/debug", (req, res) => {
-        res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify([...visitors]));
+        res.writeHead(200, { "Content-Type": "application/json" });
+        res.end(JSON.stringify(Object.fromEntries(visitors)));
     });
 
     app.GET("/data/create-id", (req, res) => {

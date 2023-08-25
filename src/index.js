@@ -43,15 +43,15 @@ server.on("upgrade", (req, socket, head) => {
 
 server.on("listening", () => {
   const addr = server.address();
+  const formatURLWithPort = (hostname, addr) => `http${ssl ? "s" : ""}://${hostname}${(addr.port === 80 || ssl && addr.port === 443) ? "" : ":" + addr.port}`;
 
   console.log(`Server running on port ${addr.port}`)
   console.log("");
   console.log("You can now view it in your browser.")
   /* Code for listing IPS from website-aio */
-  console.log(`Local: http${ssl ? "s" : ""}://${addr.family === "IPv6" ? `[${addr.address}]` : addr.address}${(addr.port === 80 || ssl && addr.port === 443)? "" : ":" + addr.port}`);
-  console.log(`Local: http${ssl ? "s" : ""}://localhost${(addr.port === 80 || ssl && addr.port === 443)? "" : ":" + addr.port}`);
-  try { console.log(`On Your Network: http${ssl ? "s" : ""}://${hostname()}${(addr.port === 80 || ssl && addr.port === 443)? "" : ":" + addr.port}`); } catch (err) {/* Can't find LAN interface */};
-  if(process.env.REPL_SLUG && process.env.REPL_OWNER) console.log(`Replit (why are you using replit): https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`);
+  console.log(`Local: ${formatURLWithPort(addr.family === "IPv6" ? `[${addr.address}]` : addr.address, addr)}`);
+  console.log(`Local: ${formatURLWithPort("localhost", addr)}`);
+  try { console.log(`On Your Network: ${formatURLWithPort(hostname(), addr)}`); } catch (err) {/* Can't find LAN interface */};
 });
 
 server.listen({ port: PORT })
