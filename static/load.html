@@ -3,6 +3,7 @@
 <head>
     <!--
     Incognito
+	
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
@@ -84,21 +85,14 @@
             responded to.
         </p>
     </div>
-    <script>
-        const engines = {
-            google: 'https://google.com/search?q=%s',
-            ddg: 'https://duckduckgo.com/?q=%s',
-            bing: 'https://bing.com/search?q=%s',
-            brave: 'https://search.brave.com/search?q=%s',
-            startpage: 'https://www.startpage.com/sp/search?query=%s'
-        };
+    <script type="module">
+		import { searchProviders } from "./script/search.js";
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.getRegistration("./uv.sw-handler.js").then(async worker => {
                 if(!worker) await navigator.serviceWorker.register('./uv.sw-handler.js', { scope: __uv$config.prefix });
                 let url = atob(decodeURIComponent(window.location.hash.slice(1)));
-                let search = engines[localStorage.getItem('incog||search') || 'google'];
+                let search = searchProviders[localStorage.getItem('incog||search') || 'google'].frontend;
                 if (url) {
-					console.log(search, url);
                     if (!isUrl(url)) url = search.replace('%s', url);
                     else if (!(url.startsWith('https://') || url.startsWith('http://'))) { url = 'http://' + url; };
                 } else { url = new URL(search).origin }

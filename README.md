@@ -39,16 +39,9 @@ You CANNOT deploy to Vercel, Netifly, GitHub Pages, or Cloudflare pages. [Read m
     <a href="https://amethystnetwork-dev.github.io/docs/projects/incognito/manual-deployment/#terminal-with-deno"><img src="https://img.shields.io/badge/deno%20js-000000?style=for-the-badge&logo=deno&logoColor=white" alt="Deno JS"></img></a>
     <a href="https://amethystnetwork-dev.github.io/docs/projects/incognito/manual-deployment/#terminal-with-nodejs"><img src="https://img.shields.io/badge/terminal-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Terminal"></img></a>
     <a href="https://amethystnetwork-dev.github.io/docs/projects/incognito/manual-deployment/#docker-with-nodejs"><img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"></img></a>
-    <br>
-    <br>
-    <a href="https://alienhub.xyz/?utm_source=incog_gh&utm_medium=amethystnetwork">
-      <img src="https://alienhub.xyz/alien1.gif" width="450" height="150"></img>
-    </a>
 </div>
 
 ## Discord Server
-
-Press the join button to join the server:
 
 [![Join us on Discord](https://invidget.switchblade.xyz/985982201302769765?theme=light)](https://amethystnetwork-dev.github.io/discord/invite)
 
@@ -81,10 +74,6 @@ This repo is for people that want an easy way to deploy Incognito to cloud hosti
 **Where are the game files?**
 
 They are located in [another repo](https://github.com/amethystnetwork-dev/Incognito-gfiles) because of the large file sizes.
-
-**X website is not working?**
-
-Proxies can have issues, like websites not working, websites blocking the proxy or data being locked to that website. [AlienHub](https://alienhub.xyz/?utm_medium=amethystnetwork) fixes these issues and more!
 
 **What proxies are used?**
 

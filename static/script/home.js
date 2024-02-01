@@ -1,3 +1,20 @@
+/**
+ * Incognito
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
 /*
   _____                   _                _     _                                                                      
  |  __ \                 | |              | |   | |                                                                     
@@ -22,48 +39,11 @@ const tips = [
     'Access popular media & sites easily in <a href="#apps">apps.</a>',
     'This <a href="https://github.com/amethystnetwork-dev/Incognito">unofficial In&#173;cog&#173;nito version</a> is made by Am&#173;et&#173;hy&#173;st Net&#173;wo&#173;rk.',
     'Join the <a href="#community">Am&#173;et&#173;hyst Ne&#173;tw&#173;ork d&#173;i&#173;sco&#173;rd</a>',
-    'Get answers to questions in <a href="#support">support</a>',
-    `Check out <a onclick="(${ah.toString()})()">Ali&#173;enHu&#173;b</a>`
+    'Get answers to questions in <a href="#support">support</a>'
 ];
 
-// You can add more search engines if you want
-const searchProviders = {
-    google: {
-        mapQuery: (query) => `http://google.com/complete/search?q=${query}&client=${(["Chrome", "Firefox", "Safari"].filter(c => navigator.userAgent.includes(c))[0] || "Chrome").toLowerCase()}`,
-        parseResponse: (res) => JSON.parse(res)[1]
-    },
-    ddg: {
-        mapQuery: (query) => `https://duckduckgo.com/ac/?q=${encodeURIComponent(query)}`,
-        parseResponse: (res) => JSON.parse(res).map(ac => ac.phrase)
-    },
-    bing: {
-        mapQuery: (query) => `https://www.bing.com/AS/Suggestions?qry=${encodeURIComponent(query)}&cvid=%01&bareServer=`,
-        parseResponse: (res) => ([...res.matchAll(/<span class="sa_tm_text">(.*?)<\/span>/g)]).map(phrase => phrase[1].replace(/<strong>|<\/strong>/g, ''))
-    },
-    brave: {
-        mapQuery: (query) => `https://search.brave.com/api/suggest?q=${encodeURIComponent(query)}`,
-        parseResponse: (res) => JSON.parse(res)[1]
-    },
-    startpage: {
-        mapQuery: (query) => `https://www.startpage.com/suggestions?q=${encodeURIComponent(query)}&segment=omnibox`,
-        parseResponse: (res) => JSON.parse(res).suggestions.map(ac => ac.text)
-    },
-    ecosia: {
-        mapQuery: (query) => `https://ac.ecosia.org/?q=${encodeURIComponent(query)}`,
-        parseResponse: (res) => JSON.parse(res).suggestions
-    }
-};
+import { searchProviders } from "./search.js";
 
-function ah() {
-    app.main.target.style.display = 'none';
-    app.header.target.style.display = 'none';
-
-    const frame = document.querySelector('.access-frame');
-    frame.src = './load.html#aHR0cHM6Ly9hbGllbmh1Yi54eXovP3V0bV9zb3VyY2U9aW5jb2dfZGVwbG95JnV0bV9tZWRpdW09YW1ldGh5c3RuZXR3b3Jr';
-
-    frame.style.display = 'block';
-    document.querySelector('.access-panel').style.removeProperty('display');
-}
 
 function access(app) {
     if (document.querySelector('header').hasAttribute('data-init')) {
@@ -109,7 +89,9 @@ function access(app) {
 
 		clearTimeout(app.timeout);
 		app.timeout = setTimeout(async () => {
-			const provider = searchProviders[localStorage.getItem('incog||suggestions') || 'ddg'];
+			const providerName = localStorage.getItem('incog||suggestions');
+			const provider = searchProviders[(providerName in searchProviders) ? providerName : 'ddg'];
+
 			const res = await app.bare.fetch(provider.mapQuery(event.target.value));
 			const text = await res.text();
 			const suggestions = provider.parseResponse(text);

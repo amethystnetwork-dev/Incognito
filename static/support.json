@@ -9,7 +9,7 @@
     },
     {
         "question": "Is my information secure",
-        "answer": "Incognito, in its unmodified state from its <a href=\"https://github.com/amethystnetwork-dev/Incognito\">GitHub repo</a>, does not collect your data. However, users can host thier own instance of this website that could have been modified to collect user data"
+        "answer": "Incognito, in its unmodified state from its <a href=\"https://github.com/amethystnetwork-dev/Incognito\">GitHub repo</a>, does not collect your data. However, users can host their own instance of this website that could have been modified to collect user data"
     },
     {
         "question": "Why is GeForce Now is responding with \"403 Access Denied\"",
