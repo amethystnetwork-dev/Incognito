@@ -17,6 +17,8 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
         -->
+	<script src="./bm/bare.cjs"></script>
+	<script src="./lcl/index.js"></script>
     <script src="./uv/uv.bundle.js"></script>
     <script src="./uv/uv.config.js"></script>
     <style>
@@ -86,16 +88,24 @@
         </p>
     </div>
     <script type="module">
-		import { searchProviders } from "./script/search.js";
+		import { searchProviders } from './script/search.js';
+
+		function searchUtil(input, search) {
+			try {
+				return new URL(input).toString();
+			} catch {}
+			try {
+				const url = new URL(`http://${input}`);
+				if(url.hostname.includes('.')) return url.toString()
+			} catch {}
+			return search.replace("%s", encodeURIComponent(input));
+		}
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.getRegistration("./uv.sw-handler.js").then(async worker => {
-                if(!worker) await navigator.serviceWorker.register('./uv.sw-handler.js', { scope: __uv$config.prefix });
-                let url = atob(decodeURIComponent(window.location.hash.slice(1)));
+			navigator.serviceWorker.ready.then(() => {
+				BareMux.SetTransport("CurlMod.LibcurlClient", { wisp: `${window.location.protocol === 'https:' ? 'wss' : 'ws'}://${window.location.host}/wisp/` });
+				let url = atob(decodeURIComponent(window.location.hash.slice(1)));
                 let search = searchProviders[localStorage.getItem('incog||search') || 'google'].frontend;
-                if (url) {
-                    if (!isUrl(url)) url = search.replace('%s', url);
-                    else if (!(url.startsWith('https://') || url.startsWith('http://'))) { url = 'http://' + url; };
-                } else { url = new URL(search).origin }
+                if (url) url = searchUtil(url, search); else url = new URL(search).origin;
                 window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
             });
         } else {
@@ -106,18 +116,6 @@
                 document.querySelector('.info').textContent = `Your browser does not support service workers or is blocking them (private browsing mode?). Try swapping or updating your browser.`
             }
         };
-
-        function isUrl(val = '') {
-            return (/^http(s?):\/\//.test(val) || isSubdomain(val)) ? true : false;
-        }
-
-		function isSubdomain(val) {
-			try {
-				const url = new URL(`http://${input}`);
-    			if (url.hostname.includes(".")) return true;
-			} catch {}
-			return false;
-		}
     </script>
 </body>
 </html>

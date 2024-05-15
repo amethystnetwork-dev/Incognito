@@ -1,7 +1,7 @@
 { pkgs }: {
 	deps = [
-         pkgs.nodejs-18_x
-         pkgs.unzip
-         pkgs.wget
+        pkgs.nodejs_20
+        pkgs.unzip
+        pkgs.wget
 	];
 }

@@ -15,9 +15,11 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { createBareServer } from "@tomphttp/bare-server-node";
+import wisp from "wisp-server-node";
+import { baremuxPath } from "@mercuryworkshop/bare-mux";
 import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
 import { gamesPath } from "@amethystnetwork-dev/incognito-gfiles";
+import { libcurlPath } from "@mercuryworkshop/libcurl-transport";
 
 import { fileURLToPath } from "node:url";
 import { createServer as createHttpsServer } from "node:https";
@@ -37,12 +39,11 @@ under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-You should have received a copy of the GNU General Public License\
+You should have received a copy of the GNU General Public License
 along with this program. If not, see <https://www.gnu.org/licenses/>.
 `);
 
 const app = connect();
-const bare = createBareServer("/bare/");
 const ssl = existsSync("../ssl/key.pem") && existsSync("../ssl/cert.pem");
 const PORT = process.env.PORT || ssl ? 443 : 8080;
 const server = ssl ? createHttpsServer({
@@ -51,19 +52,23 @@ const server = ssl ? createHttpsServer({
 }) : createHttpServer();
 
 app.use((req, res, next) => {
-  if(bare.shouldRoute(req)) bare.routeRequest(req, res); else next();
+	res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
+	res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
+	next();
 });
 
 app.use(serveStatic(fileURLToPath(new URL("../static/", import.meta.url))));
 app.use("/source", serveStatic(gamesPath));
 app.use("/source", serveIndex(gamesPath, { icons: true }));
 
-app.use("/uv/", serveStatic(uvPath));
+app.use("/uv", serveStatic(uvPath));
+app.use("/lcl", serveStatic(libcurlPath));
+app.use("/bm", serveStatic(baremuxPath));
 analytics(app);
 
 server.on("request", app);
 server.on("upgrade", (req, socket, head) => {
-  if(bare.shouldRoute(req, socket, head)) bare.routeUpgrade(req, socket, head); else socket.end();
+	if(req.url.startsWith("/wisp")) wisp.routeRequest(req, socket, head); else socket.end();
 });
 
 server.on("listening", () => {

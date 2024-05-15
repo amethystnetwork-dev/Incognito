@@ -59,8 +59,9 @@ import { support } from './support.js';
 import { community } from './community.js';
 
 window.app = new App();
-
-app.bare = new Ultraviolet.BareClient(new URL(__uv$config.bare, window.location));
+window.addEventListener("load", () => {
+	app.registerSW();
+});
 
 switch(localStorage.getItem('incog||background')) {
     case 'stars':
@@ -167,15 +168,17 @@ app.on('after', () => {
 
 document.querySelector('#access-form').addEventListener('submit', event => {
     event.preventDefault();
-    app.main.target.style.display = 'none';
-    app.header.target.style.display = 'none';
-    
-    const frame = document.querySelector('.access-frame');
-
-    frame.src = '/load.html#' + btoa(event.target[0].value);
-    frame.style.display = 'block';
-
-    document.querySelector('.access-panel').style.removeProperty('display');
+	app.registerSW().then(() => {
+		app.main.target.style.display = 'none';
+		app.header.target.style.display = 'none';
+		
+		const frame = document.querySelector('.access-frame');
+	
+		frame.src = '/load.html#' + btoa(event.target[0].value);
+		frame.style.display = 'block';
+	
+		document.querySelector('.access-panel').style.removeProperty('display');
+	});
 });
 
 document.querySelector('.close-access').addEventListener('click', event => {

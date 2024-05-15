@@ -101,6 +101,7 @@ function access(app) {
 						events: {
 							click() {
 								app.search.input.value = element;
+								app.registerSW();
 								const frame = document.querySelector('iframe');
 								document.querySelector('main').style.display = 'none';
 								document.querySelector('header').style.display = 'none';
@@ -135,7 +136,8 @@ function access(app) {
     if (params.has('link')) {
         app.main.target.style.display = 'none';
         app.header.target.style.display = 'none';
-        
+		app.registerSW();
+
         const frame = document.querySelector('.access-frame');
 
         frame.src = './load.html#' + encodeURIComponent(params.get('link'));

@@ -40,6 +40,7 @@ import { createComponent } from './component.js';
 class App extends EventEmitter {
     constructor(hashes = []) {
         super();
+		this.bare = new BareMux.BareClient();
         this.header = createComponent(document.querySelector('header'));
         this.search = createComponent(document.querySelector('header .search'));
         this.nav = createComponent(document.querySelector('nav'));
@@ -112,6 +113,23 @@ class App extends EventEmitter {
 
         return element;
     };
+	
+	#registerSW() {
+		return navigator.serviceWorker.getRegistration('./uv.sw-handler.js').then((worker) => {
+			if(worker) return worker;
+			return navigator.serviceWorker.register('./uv.sw-handler.js');
+		});
+	}
+
+	async registerSW() {
+		const worker = await this.#registerSW();
+		this.setTransport();
+		return worker;
+	}
+
+	setTransport() {
+		BareMux.SetTransport("CurlMod.LibcurlClient", { wisp: `${window.location.protocol === 'https:' ? 'wss' : 'ws'}://${window.location.host}/wisp/` });
+	}
 };
 
 export { App };

@@ -1,15 +1,18 @@
-FROM node:18-alpine
+FROM node:20-alpine AS base
+
 ENV NODE_ENV=production
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
 
 WORKDIR /app
+COPY ["package.json", "pnpm-lock.yaml", "./"]
+COPY ./static ./static
+COPY ./src/ ./src
 
-COPY package*.json .
+RUN corepack enable
 
-RUN npm install
-
-COPY static static/
-COPY src/*.js src/
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
 
 EXPOSE 8080
 
-CMD ["npm", "start"]
+CMD ["pnpm", "start"]
